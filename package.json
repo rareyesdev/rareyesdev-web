@@ -1,0 +1,19 @@
+{
+  "name": "rareyesdev-web",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "author": "Ramón Alejandro Reyes Fajardo",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/rareyesdev/rareyesdev-web#readme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rareyesdev/rareyesdev-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rareyesdev/rareyesdev-web/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
