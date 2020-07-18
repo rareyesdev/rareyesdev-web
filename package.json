@@ -14,6 +14,15 @@
     "url": "https://github.com/rareyesdev/rareyesdev-web/issues"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node watch-build.js & nodemon --watch src --ext js,css --exec \"npm run build\"",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "terser --compress --mangle --source-map \"root='http://localhost:3000',url='main.min.js.map'\" --output build/main.min.js src/main.js",
+    "build:css": "cleancss --source-map -o build/main.min.css src/main.css"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.9",
+    "clean-css-cli": "^4.3.0",
+    "nodemon": "^2.0.4",
+    "terser": "^4.8.0"
   }
 }
