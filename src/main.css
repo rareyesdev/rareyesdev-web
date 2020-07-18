@@ -3,6 +3,10 @@
   --size2x: calc(2 * var(--size1x));
   --size3x: calc(3 * var(--size1x));
   --size4x: calc(4 * var(--size1x));
+  --size5x: calc(5 * var(--size1x));
+  --size6x: calc(6 * var(--size1x));
+  --size7x: calc(7 * var(--size1x));
+  --size8x: calc(8 * var(--size1x));
 
   --topNavHeight: 48px;
 
@@ -123,26 +127,30 @@ nav ul li {
 /* ABOUT */
 
 #about {
+  display: flex;
   background-color: var(--backgroundColorSecondary);
   padding: 96px 0;
-}
-
-#about .row {
-  max-width: 1020px;
-  margin: 0 auto;
-  display: flex;
 }
 
 #about .column {
   margin: 0 var(--size4x);
 }
 
-#about .column:first-child {
-  flex: 1 1 auto;
+#about-photo {
+  flex: 0 0 450px;
 }
 
-#about .column:not(:first-child) {
-  flex: 3 1 auto;
+#about-photo > img {
+  display: block;
+  margin: auto;
+  border-radius: 100%;
+  max-width: 300px;
+}
+
+#about-text {
+  flex: 1 1 auto;
+  padding: 0 var(--size8x);
+  max-width: 768px;
 }
 
 /* PROJECTS HEADER */
@@ -184,26 +192,11 @@ nav ul li {
 }
 
 .project-comments {
-  padding: 2em 4em;
+  padding: var(--size4x) var(--size8x);
 }
 
 .project-delimiter {
   display: none;
-}
-
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-  }
-
-  .project-preview-wrapper {
-    flex: initial;
-    height: 500px;
-  }
-
-  .project-delimiter {
-    display: block;
-  }
 }
 
 /* FOOTER */
@@ -225,17 +218,6 @@ footer ul {
 footer li {
   list-style: none;
   margin: var(--size2x) var(--size3x)
-}
-
-@media (max-width: 768px) {
-  footer ul {
-    text-align: center;
-    flex-direction: column;
-  }
-
-  footer li:not(:last-child) {
-    margin-bottom: 0;
-  }
 }
 
 /* GENERAL */
@@ -270,4 +252,56 @@ p {
   color: var(--fontColorSecondary);
   font-size: 16px;
   line-height: 30px;
+}
+
+.side-text {
+  padding: var(--size4x) var(--size8x);
+  max-width: 768px;
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 768px) {
+  #about {
+    flex-direction: column;
+  }
+
+  #about-photo {
+    flex: 0 0 150px;
+  }
+
+  #about-photo > img {
+    max-width: 150px;
+  }
+
+  .project {
+    flex-direction: column;
+  }
+
+  .project-preview-wrapper {
+    flex: initial;
+    height: 500px;
+  }
+
+  .project-delimiter {
+    display: block;
+  }
+
+  footer ul {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  footer li:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .side-text {
+    text-align: 'justify';
+    /* ID specificity :'(
+       Refactor using classes if this gets too messy.
+    */
+    padding-left: var(--size4x) !important;
+    padding-right: var(--size4x) !important;
+  }
 }
