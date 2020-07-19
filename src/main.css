@@ -10,6 +10,8 @@
 
   --topNavHeight: 48px;
 
+  --containerMaxWidth: 1350px;
+
   --fontColorPrimary: #fff;
   --fontColorSecondary: #a8a8a8;
 
@@ -20,8 +22,8 @@
   --backgroundColorPrimary: rgb(49, 36, 80);
   --backgroundColorSecondary: #2b2b2b;
   --backgroundColorNavigation: #333;
-  --backgroundColorProject1: #4f51b5;
-  --backgroundColorProject2: #4b4dad;
+  --backgroundColorProject1: var(--backgroundColorSecondary);
+  --backgroundColorProject2: #2b2b2bf5;
 }
 
 html, body {
@@ -127,7 +129,6 @@ nav ul li {
 /* ABOUT */
 
 #about {
-  display: flex;
   background-color: var(--backgroundColorSecondary);
   padding: 96px 0;
 }
@@ -189,6 +190,7 @@ nav ul li {
 .project-preview {
   max-height: 100%;
   max-width: 100%;
+  filter: brightness(0.9);
 }
 
 .project-comments {
@@ -254,7 +256,14 @@ p {
   line-height: 30px;
 }
 
+.container {
+  max-width: var(--containerMaxWidth);
+  display: flex;
+  margin: 0 auto;
+}
+
 .side-text {
+  text-align: 'justify';
   padding: var(--size4x) var(--size8x);
   max-width: 768px;
 }
@@ -270,7 +279,7 @@ p {
 /* BREAKPOINTS */
 
 @media (max-width: 768px) {
-  #about {
+  .container {
     flex-direction: column;
   }
 
@@ -305,7 +314,6 @@ p {
   }
 
   .side-text {
-    text-align: 'justify';
     /* ID specificity :'(
        Refactor using classes if this gets too messy.
     */
