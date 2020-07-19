@@ -60,7 +60,11 @@
     <section id="about">
       <div class="container">
         <div id="about-photo">
-          <img class="lazy-image" data-src="/images/profile-600-89.jpg" alt="profile">
+          <picture class="lazy">
+            <source type="image/webp" data-srcset="/images/profile-600-50.webp">
+            <source type="image/jpeg" data-srcset="/images/profile-600-89.jpg">
+            <img data-srcset="/images/profile-600-89.jpg" alt="profile">
+          </picture>
         </div>
         <div id="about-text" class="side-text">
           <h2>About Me</h2>
@@ -129,8 +133,13 @@
     <section id="projects">
       <div class="project">
         <div class="container">
-          <div class="project-preview-wrapper"><img class="project-preview lazy-image"
-              data-src="/images/json-viewer-project-preview.png" alt="json viewer project preview"></div>
+          <div class="project-preview-wrapper">
+            <picture class="lazy">
+              <source type="image/webp" data-srcset="/images/json-viewer-project-preview-50.webp">
+              <source type="image/jpeg" data-srcset="/images/json-viewer-project-preview.png">
+              <img class="project-preview" data-srcset="/images/json-viewer-project-preview.png" alt="json viewer project preview">
+            </picture>
+          </div>
           <div class="project-comments side-text">
             <h2><a href="https://json-viewer.netlify.app" rel="noopener noreferrer" target="_blank">Online Json Viewer
                 <svg class="external-link-icon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
@@ -172,8 +181,13 @@
       </div>
       <div class="project">
         <div class="container">
-          <div class="project-preview-wrapper"><img class="project-preview lazy-image"
-              data-src="/images/habit-tracker-project-preview.png" alt="habits tracker project preview"></div>
+          <div class="project-preview-wrapper">
+            <picture class="lazy">
+              <source type="image/webp" data-srcset="/images/habit-tracker-project-preview-50.webp">
+              <source type="image/jpeg" data-srcset="/images/habit-tracker-project-preview.png">
+              <img class="project-preview" data-srcset="/images/habit-tracker-project-preview.png" alt="habits tracker project preview">
+            </picture>
+          </div>
           <div class="project-comments side-text">
             <h2><a href="https://habits.rareyes.dev" rel="noopener noreferrer" target="_blank">Habits Tracker <svg
                   class="external-link-icon" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>

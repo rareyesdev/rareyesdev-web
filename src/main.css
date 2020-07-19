@@ -141,7 +141,7 @@ nav ul li {
   flex: 0 0 450px;
 }
 
-#about-photo > img {
+#about-photo img {
   display: block;
   margin: auto;
   border-radius: 100%;
@@ -279,12 +279,15 @@ p {
   max-width: 768px;
 }
 
-.lazy-image {
-  visibility: hidden;
+/* ANIMATIONS */
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-.lazy-image.loaded {
-  visibility: visible;
+.fade-in {
+   animation: fade-in 1s ease;
 }
 
 /* BREAKPOINTS */

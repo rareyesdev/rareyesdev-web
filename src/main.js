@@ -51,10 +51,38 @@
   }
 
   function lazyLoadImages() {
-    const images = document.getElementsByClassName('lazy-image');
-    for (let image of images) {
-      image.src = image.getAttribute('data-src');
-      image.classList.add('loaded');
+    const lazyPictures = document.getElementsByClassName('lazy');
+
+    function loadNow(picture) {
+      picture.lastElementChild.addEventListener('load', function onLoad() {
+        picture.lastElementChild.classList.add('fade-in');
+        this.removeEventListener('load', onLoad);
+      })
+      for (let source of picture.children) {
+        source.srcset = source.dataset.srcset;
+      }
+    }
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const picture = entry.target;
+            loadNow(picture);
+            observer.unobserve(picture);
+            picture.classList.remove('lazy');
+          }
+        });
+      });
+
+      for (let picture of lazyPictures) {
+        observer.observe(picture);
+      }
+    } else {
+      // Not supported, load all images immediately
+      for (let picture of lazyPictures) {
+        loadNow(picture);
+      }
     }
   }
 
