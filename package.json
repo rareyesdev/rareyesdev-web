@@ -14,12 +14,15 @@
     "url": "https://github.com/rareyesdev/rareyesdev-web/issues"
   },
   "scripts": {
-    "start": "node watch-build.js & nodemon --watch src --ext js,css --exec \"npm run build\"",
-    "build": "npm run build:js && npm run build:css",
+    "start": "(npm run watch:js & npm run watch:css & npm run watch:assets) & node watch-build.js",
+    "watch:js": "nodemon --watch src --ext js --exec \"npm run build:js\"",
+    "watch:css": "nodemon --watch src --ext css --exec \"npm run build:css\"",
+    "watch:assets": "nodemon --watch public --ext json,html,svg,jpg,png,ico,txt --exec \"npm run build:assets\"",
+    "build": "npm run build:js && npm run build:css && npm run build:css",
     "build:js": "terser --compress --mangle --source-map \"root='http://localhost:3000',url='main.min.js.map'\" --output build/main.min.js src/main.js",
     "build:css": "cleancss --source-map -o build/main.min.css src/main.css",
-    "build:clean": "trash build/*",
-    "copy-assets": "copyup public/**/* public/*.* build"
+    "build:assets": "copyup public/**/* public/*.* build",
+    "build:clean": "trash build/*"
   },
   "devDependencies": {
     "browser-sync": "^2.26.9",
