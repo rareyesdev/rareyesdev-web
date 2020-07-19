@@ -179,13 +179,15 @@ nav ul li {
 
 .project-preview-wrapper {
   flex: 0 0 450px;
-  justify-content: center;
+  align-self: center;
 }
 
 .project-preview {
-  max-height: 100%;
   max-width: 100%;
+  height: auto;
   filter: brightness(0.9);
+  /* chrome image downscale makes it look blurry. https://stackoverflow.com/a/42216003/2105988 */
+  /* image-rendering: -webkit-optimize-contrast; */
 }
 
 .project-comments {
@@ -316,6 +318,7 @@ p {
 
   .project-preview-wrapper {
     flex: initial;
+    max-width: 450px;
   }
 
   .project-delimiter {
