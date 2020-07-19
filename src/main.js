@@ -7,7 +7,6 @@
   let aboutSection;
   let projectsHeaderSection;
   let topNavHeight;
-  let imagesLoaded = false;
 
   window.addEventListener('DOMContentLoaded', function onLoad() {
     initialize();
@@ -15,9 +14,10 @@
 
   function initialize() {
     queryElements();
-    setCopyrightYear();
+    lazyLoadImages();
     trackScroll();
     configureNavigation();
+    setCopyrightYear();
     logInfo();
   }
 
@@ -51,8 +51,6 @@
   }
 
   function lazyLoadImages() {
-    if (imagesLoaded) return;
-    imagesLoaded = true;
     const images = document.getElementsByClassName('lazy-image');
     for (let image of images) {
       image.src = image.getAttribute('data-src');
@@ -64,7 +62,6 @@
     const targetElement = scrollElement instanceof HTMLHtmlElement || scrollElement instanceof HTMLBodyElement ? window : scrollElement;
     const nav = document.getElementsByTagName('nav')[0];
     targetElement.addEventListener('scroll', function onScroll() {
-      lazyLoadImages();
       const scrollTop = scrollElement.scrollTop;
       if (scrollTop < introSection.offsetTop + introSection.clientHeight - topNavHeight) {
         homeNavLink.classList.add('active');

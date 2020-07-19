@@ -103,7 +103,7 @@ nav ul li {
 }
 
 #intro .inline-work-role {
-  color: var(--fontColorPrimary);
+  font-weight: 600;
 }
 
 #intro .inline-tech {
@@ -169,10 +169,6 @@ nav ul li {
 
 /* PROJECTS */
 
-.project {
-  display: flex;
-}
-
 .project:nth-child(odd) {
   background-color: var(--backgroundColorProject1);
 }
@@ -183,7 +179,6 @@ nav ul li {
 
 .project-preview-wrapper {
   flex: 0 0 450px;
-  display: flex;
   justify-content: center;
 }
 
@@ -297,7 +292,6 @@ p {
 
   .project-preview-wrapper {
     flex: initial;
-    height: 500px;
   }
 
   .project-delimiter {
