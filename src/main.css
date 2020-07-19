@@ -223,15 +223,6 @@ h1, h2, h3, h4 {
   color: var(--fontColorPrimary);
 }
 
-.icon {
-  height: var(--size4x);
-  width: var(--size4x);
-}
-
-.external-link-icon {
-  width: var(--size2x);
-}
-
 a {
   color: var(--linkColorDefault);
   text-decoration: none;
@@ -249,6 +240,31 @@ p {
   color: var(--fontColorSecondary);
   font-size: 16px;
   line-height: 30px;
+}
+
+.icon {
+  height: var(--size4x);
+  width: var(--size4x);
+}
+
+.external-link-icon {
+  width: var(--size2x);
+}
+
+.badge {
+  display: inline-block;
+  color: var(--fontColorSecondary);
+  padding: 4px;
+  border: 2px solid;
+}
+
+.badge-container {
+  margin: -4px -4px;
+  text-align: left;
+}
+
+.badge-container > .badge {
+  margin: 4px 4px;
 }
 
 .container {
