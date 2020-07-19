@@ -18,7 +18,7 @@
     "watch:js": "nodemon --watch src --ext js --exec \"npm run build:js\"",
     "watch:css": "nodemon --watch src --ext css --exec \"npm run build:css\"",
     "watch:assets": "nodemon --watch public --ext json,html,svg,jpg,png,ico,txt --exec \"npm run build:assets\"",
-    "build": "npm run build:js && npm run build:css && npm run build:css",
+    "build": "npm run build:js && npm run build:css && npm run build:assets",
     "build:js": "terser --compress --mangle --source-map \"root='http://localhost:3000',url='main.min.js.map'\" --output build/main.min.js src/main.js",
     "build:css": "cleancss --source-map -o build/main.min.css src/main.css",
     "build:assets": "copyup public/**/* public/*.* build",
