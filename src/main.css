@@ -130,7 +130,7 @@ nav ul li {
 
 #about {
   background-color: var(--backgroundColorSecondary);
-  padding: 96px 0;
+  padding: var(--size4x) 0;
 }
 
 #about .column {
