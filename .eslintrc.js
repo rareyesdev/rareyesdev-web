@@ -37,6 +37,9 @@ module.exports = {
 
     // this is buggy https://github.com/typescript-eslint/typescript-eslint/issues/1868
     '@typescript-eslint/no-unsafe-member-access': 'off',
+
+    // this seems to be caching. changes to CSS are not picked up even when TS sees the new value
+    '@typescript-eslint/no-unsafe-assignment': 'off',
   },
   overrides: [
     {

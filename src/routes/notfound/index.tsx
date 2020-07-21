@@ -1,6 +1,6 @@
 import { FunctionComponent, h } from 'preact';
 import { Link } from 'preact-router/match';
-import * as style from './style.css';
+import style from './style.css';
 
 const Notfound: FunctionComponent = () => {
   return (
