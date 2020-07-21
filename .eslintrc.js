@@ -30,9 +30,13 @@ module.exports = {
   },
   ignorePatterns: ['build/*', '**/*.css.d.ts'],
   rules: {
+    'react/prop-types': 'off',
     'react/no-unescaped-entities': 'off',
     'react/no-unknown-property': ['error', { ignore: ['class'] }],
     '@typescript-eslint/explicit-function-return-type': 'off',
+
+    // this is buggy https://github.com/typescript-eslint/typescript-eslint/issues/1868
+    '@typescript-eslint/no-unsafe-member-access': 'off',
   },
   overrides: [
     {

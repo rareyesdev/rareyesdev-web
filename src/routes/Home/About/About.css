@@ -1,0 +1,18 @@
+.root {
+  background-color: var(--backgroundColorSecondary);
+  padding: var(--size4x) 0;
+}
+
+.photoContainer img {
+  display: block;
+  margin: auto;
+  border-radius: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .photoContainer img {
+    max-width: 150px;
+  }
+}

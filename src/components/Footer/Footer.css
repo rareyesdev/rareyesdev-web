@@ -1,0 +1,29 @@
+.root {
+  color: var(--fontColorPrimary);
+  background-color: var(--backgroundColorPrimary);
+}
+
+.root ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 64px;
+  padding: 0;
+  margin: 0;
+}
+
+.root li {
+  list-style: none;
+  margin: var(--size2x) var(--size3x);
+}
+
+@media (max-width: 768px) {
+  footer ul {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  footer li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}

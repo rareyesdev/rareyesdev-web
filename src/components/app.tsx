@@ -1,10 +1,11 @@
-import { FunctionalComponent, h } from 'preact';
+import { FunctionComponent, h } from 'preact';
 import { Route, Router, RouterOnChangeArgs } from 'preact-router';
 
-import Home from '../routes/home';
+import Home from '../routes/Home/Home';
 import Profile from '../routes/profile';
 import NotFoundPage from '../routes/notfound';
-import Header from './header';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
 if ((module as any).hot) {
@@ -12,10 +13,9 @@ if ((module as any).hot) {
   require('preact/debug');
 }
 
-const App: FunctionalComponent = () => {
-  let currentUrl: string;
+const App: FunctionComponent = () => {
   const handleRoute = (e: RouterOnChangeArgs) => {
-    currentUrl = e.url;
+    false && console.log(e.url);
   };
 
   return (
@@ -27,6 +27,7 @@ const App: FunctionalComponent = () => {
         <Route path="/profile/:user" component={Profile} />
         <NotFoundPage default />
       </Router>
+      <Footer />
     </div>
   );
 };

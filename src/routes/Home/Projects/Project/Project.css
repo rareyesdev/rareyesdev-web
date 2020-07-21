@@ -1,0 +1,26 @@
+.previewPictureContainer {
+  align-self: center;
+}
+
+.previewPictureContainer img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(0.9);
+  /* chrome image downscale makes it look blurry. https://stackoverflow.com/a/42216003/2105988 */
+  /* image-rendering: -webkit-optimize-contrast; */
+}
+
+.delimiter {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .previewPictureContainer {
+    flex: initial;
+    max-width: 440px;
+  }
+
+  .delimiter {
+    display: block;
+  }
+}

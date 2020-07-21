@@ -1,0 +1,33 @@
+.root {
+  max-width: var(--containerMaxWidth);
+  display: flex;
+  margin: 0 auto;
+}
+
+.root > *:first-child {
+  flex: 0 0 440px;
+}
+
+.root > *:last-child {
+  flex: 1 1 auto;
+  padding: 0 var(--size8x);
+  max-width: 832px;
+}
+
+.root p {
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .root {
+    flex-direction: column;
+  }
+
+  .root > *:first-child {
+    flex: 1 1 auto;
+  }
+
+  .root > *:last-child {
+    padding: 0 var(--size4x);
+  }
+}

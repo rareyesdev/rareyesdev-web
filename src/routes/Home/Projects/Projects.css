@@ -1,0 +1,18 @@
+.header {
+  text-align: center;
+  letter-spacing: 4.5px;
+  background-color: var(--backgroundColorPrimary);
+}
+
+.header > h2 {
+  margin: 0;
+  padding: var(--size3x) 0;
+}
+
+.projectOdd {
+  background-color: var(--backgroundColorProject1);
+}
+
+.projectEven {
+  background-color: var(--backgroundColorProject2);
+}

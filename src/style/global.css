@@ -1,0 +1,68 @@
+:root {
+  --size1x: 8px;
+  --size2x: calc(2 * var(--size1x));
+  --size3x: calc(3 * var(--size1x));
+  --size4x: calc(4 * var(--size1x));
+  --size5x: calc(5 * var(--size1x));
+  --size6x: calc(6 * var(--size1x));
+  --size7x: calc(7 * var(--size1x));
+  --size8x: calc(8 * var(--size1x));
+
+  --topNavHeight: 48px;
+
+  --containerMaxWidth: 1350px;
+
+  --fontColorPrimary: #fff;
+  --fontColorSecondary: #a8a8a8;
+
+  --linkColorDefault: var(--fontColorPrimary);
+  --linkColorActive: #f06000;
+  --linkColorHover: #b6866f;
+
+  --backgroundColorPrimary: rgb(49, 36, 80);
+  --backgroundColorSecondary: #2b2b2b;
+  --backgroundColorNavigation: #333;
+  --backgroundColorProject1: var(--backgroundColorSecondary);
+  --backgroundColorProject2: #2b2b2bf5;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* GENERAL */
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--fontColorPrimary);
+}
+
+a {
+  color: var(--linkColorDefault);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--linkColorHover);
+}
+
+a.active {
+  color: var(--linkColorActive);
+}
+
+p {
+  color: var(--fontColorSecondary);
+  font-size: 16px;
+  line-height: 30px;
+}
