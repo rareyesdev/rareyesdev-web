@@ -11,11 +11,11 @@
   transition: background-color 0.3s, opacity 0.3s;
 }
 
-.root nav.nav-solid {
+.root nav.navSolid {
   background-color: var(--backgroundColorNavigation);
 }
 
-.root nav.nav-faded {
+.root nav.navFaded {
   opacity: 0;
 }
 
