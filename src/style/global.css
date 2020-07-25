@@ -8,7 +8,8 @@
   --size7x: calc(7 * var(--size1x));
   --size8x: calc(8 * var(--size1x));
 
-  --topNavHeight: 48px;
+  --headerHeight: 48px;
+  --footerHeight: 64px;
 
   --containerMaxWidth: 1350px;
 
@@ -31,6 +32,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  background-color: var(--backgroundColorSecondary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

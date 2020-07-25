@@ -5,11 +5,11 @@ import Projects from './Projects/Projects';
 
 const Home: FunctionComponent = () => {
   return (
-    <div>
+    <main>
       <Intro />
       <About />
       <Projects />
-    </div>
+    </main>
   );
 };
 

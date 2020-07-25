@@ -1,5 +1,6 @@
 .root {
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
 }
@@ -33,7 +34,7 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  height: var(--topNavHeight);
+  height: var(--headerHeight);
 }
 
 .root nav ul li {

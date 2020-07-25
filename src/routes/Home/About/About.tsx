@@ -1,7 +1,7 @@
 import { FunctionComponent, h } from 'preact';
+
 import style from './About.css';
 import LazyPicture from '../../../components/LazyPicture/LazyPicture';
-import { cx } from '../../../utils/cx';
 import TwoColumnLayout from '../../../components/TwoColumnLayout/TwoColumnLayout';
 import ExternalLink from '../../../components/ExternalLink/ExternalLink';
 
@@ -84,7 +84,8 @@ const About: FunctionComponent = () => {
             .
           </p>
           <p>
-            When I'm not writing code, I enjoy watching StaCraft 2 tournaments, reading, and{' '}
+            When I'm not writing code, I enjoy watching StaCraft 2 tournaments,{' '}
+            <a href="/favorite-books">reading</a>, and{' '}
             <ExternalLink href="https://brilliant.org/">exercising my brain</ExternalLink>.
           </p>
         </div>

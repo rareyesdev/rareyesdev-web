@@ -1,0 +1,40 @@
+{
+  "platinum": [
+    {
+      "title": "Code Complete 2nd edition"
+    },
+    {
+      "title": "The DevOps Handbook"
+    }
+  ],
+  "gold": [
+    {
+      "title": "You Don't Know JS",
+      "author": ["Kyle Simpson"]
+    },
+    {
+      "title": "How to Win Friends and Influence People",
+      "author": ["Dale Carnegie"]
+    }
+  ],
+  "silver": [
+    {
+      "title": "Atomic habits",
+      "author": ["James Clear"]
+    },
+    {
+      "title": "Rich Dad Poor Dad",
+      "author": ["Robert Kiyosaki", "Sharon Lechter"]
+    },
+    {
+      "title": "Cracking the Coding Interview",
+      "author": ["Gayle Laakmann McDowell"]
+    }
+  ],
+  "bronze": [
+    {
+      "title": "Predictably Irrational",
+      "author": ["Dan Ariely"]
+    }
+  ]
+}

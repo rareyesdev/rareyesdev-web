@@ -1,0 +1,26 @@
+.root {
+}
+
+.root ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.root li {
+  padding: var(--size2x) 0;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: var(--containerMaxWidth);
+}
+
+.container > div {
+  flex-grow: 1;
+}
+
+.container > ul {
+  flex-grow: 3;
+}

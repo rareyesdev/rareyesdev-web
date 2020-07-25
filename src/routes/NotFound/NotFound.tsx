@@ -1,15 +1,12 @@
 import { FunctionComponent, h } from 'preact';
 import { Link } from 'preact-router/match';
-import style from './style.css';
 
 const Notfound: FunctionComponent = () => {
   return (
-    <div class={style.notfound}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1>Error 404</h1>
       <p>That page doesn't exist.</p>
-      <Link href="/">
-        <h4>Back to Home</h4>
-      </Link>
+      <Link href="/">Back to Home</Link>
     </div>
   );
 };
