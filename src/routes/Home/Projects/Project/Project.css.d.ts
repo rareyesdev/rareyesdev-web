@@ -2,8 +2,9 @@
 // Please do not change this file!
 interface CssExports {
   'breakpointSm': string;
-  'delimiter': string;
   'previewPictureContainer': string;
+  'rightColumn': string;
+  'size6x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

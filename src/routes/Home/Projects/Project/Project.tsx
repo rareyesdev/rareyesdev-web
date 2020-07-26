@@ -4,6 +4,7 @@ import TwoColumnLayout from '../../../../components/TwoColumnLayout/TwoColumnLay
 import ExternalLink from '../../../../components/ExternalLink/ExternalLink';
 import ExternalLinkIcon from '../../../../components/ExternalLinkIcon/ExternalLinkIcon';
 import BadgeCollection from '../../../../components/BadgeCollection/BadgeCollection';
+import { cx } from '../../../../utils/cx';
 
 interface Props {
   rootClass?: string;
@@ -24,10 +25,10 @@ const Project: FunctionComponent<Props> = ({
   badges,
 }) => {
   return (
-    <div class={rootClass}>
+    <div class={cx(rootClass)}>
       <TwoColumnLayout>
         <div class={style.previewPictureContainer}>{previewPicture}</div>
-        <div>
+        <div class={style.rightColumn}>
           <h2>
             <ExternalLink href={title.href}>
               {title.value} <ExternalLinkIcon />
@@ -35,7 +36,6 @@ const Project: FunctionComponent<Props> = ({
           </h2>
           {description}
           <BadgeCollection badges={badges} />
-          <hr class={style.delimiter} />
         </div>
       </TwoColumnLayout>
     </div>

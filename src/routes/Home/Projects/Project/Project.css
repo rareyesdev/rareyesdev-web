@@ -1,5 +1,5 @@
 @value theme: '../../../../components/theme.css';
-@value breakpointSm from theme;
+@value size6x, breakpointSm from theme;
 
 .previewPictureContainer {
   align-self: center;
@@ -13,17 +13,13 @@
   /* image-rendering: -webkit-optimize-contrast; */
 }
 
-.delimiter {
-  display: none;
+.rightColumn {
+  padding-bottom: size6x;
 }
 
 @media (max-width: breakpointSm) {
   .previewPictureContainer {
     flex: initial;
     max-width: 440px;
-  }
-
-  .delimiter {
-    display: block;
   }
 }
