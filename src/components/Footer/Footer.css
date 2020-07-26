@@ -1,32 +1,30 @@
 @value theme: "../../components/theme.css";
-@value breakpointSm, colorBrand, colorTextHighlight, size2x, size3x from theme;
+@value breakpointSm, colorBrand, colorTextHighlight, size2x, size3x, listReset from theme;
 
 .root {
   color: colorTextHighlight;
   background-color: colorBrand;
 }
 
-.root ul {
+.list {
+  composes: listReset;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 64px;
-  padding: 0;
-  margin: 0;
 }
 
-.root li {
-  list-style: none;
+.list li {
   margin: size2x size3x;
 }
 
 @media (max-width: breakpointSm) {
-  footer ul {
+  .list {
     text-align: center;
     flex-direction: column;
   }
 
-  footer li:not(:last-child) {
+  .list li:not(:last-child) {
     margin-bottom: 0;
   }
 }

@@ -9,7 +9,7 @@ interface Props {
 const Footer: FunctionComponent<Props> = ({ rootClass }) => {
   return (
     <footer class={cx(style.root, rootClass)}>
-      <ul>
+      <ul class={style.list}>
         <li id="copyright">© Copyright 2020 Ramón Alejandro Reyes Fajardo</li>
         <li>
           <a href="https://fontawesome.com/license" rel="noopener noreferrer" target="_blank">

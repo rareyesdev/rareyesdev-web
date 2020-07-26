@@ -1,5 +1,5 @@
 @value theme: "../theme.css";
-@value breakpointSm, size4x, size8x from theme;
+@value breakpointSm, size4x, size8x, sizeHeaderHeight from theme;
 
 .mainAndFooter {
   position: relative;

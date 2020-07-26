@@ -1,39 +1,35 @@
 @value theme: "../../components/theme.css";
-@value colorBackgroundNavigation, size2x, sizeHeaderHeight from theme;
+@value colorBackgroundNavigation, size2x, sizeHeaderHeight, listReset from theme;
 
 .root {
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-}
-
-.root nav {
   font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  transition: background-color 0.3s, opacity 0.3s;
+  transition: visibility 0s linear 0s, opacity 300ms;
 }
 
-.root nav.navSolid {
+.solid {
   background-color: colorBackgroundNavigation;
 }
 
-.root nav.navFaded {
+.fadeOut {
+  visibility: hidden;
   opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
 }
 
-.root nav ul {
+.list {
+  composes: listReset;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
   height: sizeHeaderHeight;
 }
 
-.root nav ul li {
-  display: inline-block;
-  list-style: none;
+.list li {
   margin: 0 size2x;
 }

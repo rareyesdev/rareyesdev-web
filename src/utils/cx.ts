@@ -1,5 +1,29 @@
-type Option = string | null | undefined;
+type Option = string | { [key: string]: unknown } | null | undefined;
 
-export function cx(...classes: Option[]) {
-  return classes.filter(Boolean).join(' ');
+export function cx(...options: Option[]) {
+  const classes = [] as string[];
+
+  for (let i = 0; i < options.length; ++i) {
+    const option = options[i];
+    if (!option) continue;
+
+    if (typeof option === 'string') {
+      classes.push(option);
+    } else if (Array.isArray(option)) {
+      const strClasses = cx(...option);
+      if (strClasses) classes.push(strClasses);
+    } else if (typeof option === 'object') {
+      if (option.toString !== Object.prototype.toString) {
+        classes.push(option.toString());
+      } else {
+        for (const key in option) {
+          if (Object.prototype.hasOwnProperty.call(option, key) && option[key]) {
+            classes.push(key);
+          }
+        }
+      }
+    }
+  }
+
+  return classes.join(' ');
 }

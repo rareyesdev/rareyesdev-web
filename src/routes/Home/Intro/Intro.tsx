@@ -5,6 +5,7 @@ import LinkedInIcon from './LinkedInIcon';
 import GitHubIcon from './GitHubIcon';
 import ArrowDownIcon from './ArrowDownIcon';
 import { assertValue } from '../../../utils/assertValue';
+import { getRootScrollElement } from '../../../utils/getScrollElement';
 
 export const Intro: FunctionComponent = () => {
   return (
@@ -38,7 +39,7 @@ export const Intro: FunctionComponent = () => {
           e.preventDefault();
           const aboutSection = document.getElementById('about');
           if (assertValue(aboutSection)) {
-            const scrollElement = document.scrollingElement || document.documentElement;
+            const scrollElement = getRootScrollElement();
             scrollElement.scrollTo({
               top: aboutSection.offsetTop,
               behavior: 'smooth',

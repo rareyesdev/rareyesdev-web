@@ -7,6 +7,7 @@ interface CssExports {
   'mainAndFooter': string;
   'size4x': string;
   'size8x': string;
+  'sizeHeaderHeight': string;
   'theme': string;
 }
 export const cssExports: CssExports;

@@ -34,6 +34,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     'react/no-unknown-property': ['error', { ignore: ['class'] }],
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
 
     // this is buggy https://github.com/typescript-eslint/typescript-eslint/issues/1868
     '@typescript-eslint/no-unsafe-member-access': 'off',

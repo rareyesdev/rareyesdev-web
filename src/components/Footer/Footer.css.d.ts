@@ -4,6 +4,8 @@ interface CssExports {
   'breakpointSm': string;
   'colorBrand': string;
   'colorTextHighlight': string;
+  'list': string;
+  'listReset': string;
   'root': string;
   'size2x': string;
   'size3x': string;
