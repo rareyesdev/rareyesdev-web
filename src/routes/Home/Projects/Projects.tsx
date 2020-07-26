@@ -9,9 +9,8 @@ const Projects: FunctionComponent = () => {
       <div class={style.header}>
         <h2>PROJECTS</h2>
       </div>
-      <div>
+      <div class={style.container}>
         <Project
-          rootClass={style.projectOdd}
           previewPicture={
             <LazyPicture>
               <source
@@ -71,7 +70,6 @@ const Projects: FunctionComponent = () => {
           ]}
         />
         <Project
-          rootClass={style.projectEven}
           previewPicture={
             <LazyPicture>
               <source

@@ -3,6 +3,8 @@
 interface CssExports {
   'breakpointSm': string;
   'root': string;
+  'size4x': string;
+  'size8x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

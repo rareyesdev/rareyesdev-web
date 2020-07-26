@@ -5,7 +5,7 @@ import style from './Header.css';
 const Header: FunctionComponent = () => {
   return (
     <header class={style.root}>
-      <nav class={style.bar}>
+      <nav>
         <ul>
           <li>
             <Link href="/">Home</Link>

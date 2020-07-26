@@ -1,16 +1,11 @@
+@value theme: "../../components/theme.css";
+@value colorBackgroundNavigation, size2x, sizeHeaderHeight from theme;
+
 .root {
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-}
-
-.foo {
-  color: red;
-}
-
-.bar {
-  color: blue;
 }
 
 .root nav {
@@ -21,7 +16,7 @@
 }
 
 .root nav.navSolid {
-  background-color: var(--backgroundColorNavigation);
+  background-color: colorBackgroundNavigation;
 }
 
 .root nav.navFaded {
@@ -34,11 +29,11 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  height: var(--headerHeight);
+  height: sizeHeaderHeight;
 }
 
 .root nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 0 var(--size2x);
+  margin: 0 size2x;
 }

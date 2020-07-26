@@ -4,6 +4,7 @@ interface CssExports {
   'breakpointSm': string;
   'quote': string;
   'root': string;
+  'size8x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

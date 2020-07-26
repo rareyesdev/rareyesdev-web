@@ -1,5 +1,5 @@
-@value theme: '../../style/theme.css';
-@value breakpointSm from theme;
+@value theme: '../../components/theme.css';
+@value breakpointSm, size8x from theme;
 
 .root {
   font-family: Courier, monospace;
@@ -9,7 +9,7 @@
 }
 
 .quote {
-  margin: var(--size8x) 0;
+  margin: size8x 0;
   text-align: justify;
 }
 

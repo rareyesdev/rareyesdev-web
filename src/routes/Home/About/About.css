@@ -1,9 +1,8 @@
-@value theme: '../../../style/theme.css';
-@value breakpointSm from theme;
+@value theme: '../../../components/theme.css';
+@value breakpointSm, size4x from theme;
 
 .root {
-  background-color: var(--backgroundColorSecondary);
-  padding: var(--size4x) 0;
+  padding: size4x 0;
 }
 
 .photoContainer img {

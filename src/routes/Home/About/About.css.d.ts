@@ -4,6 +4,7 @@ interface CssExports {
   'breakpointSm': string;
   'photoContainer': string;
   'root': string;
+  'size4x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

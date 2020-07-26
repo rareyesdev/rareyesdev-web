@@ -4,6 +4,7 @@ interface CssExports {
   'breakpointSm': string;
   'darkText': string;
   'root': string;
+  'size4x': string;
   'theme': string;
   'title': string;
 }

@@ -1,6 +1,12 @@
 @value colorBlack: #000000;
 @value colorWhite: #ffffff;
 
+@value colorBrand: rgb(49, 36, 80);
+
+@value colorBackgroundDefault: #2b2b2b;
+@value colorBackgroundDefaultLight: #353535;
+@value colorBackgroundNavigation: #333;
+
 @value colorTextDefault: #a8a8a8;
 @value colorTextHighlight: colorWhite;
 
@@ -13,33 +19,20 @@
 @value breakpointMd: 992px;
 @value breakpointLg: 1200px;
 
+@value size1x: 8px;
+@value size2x: calc(2 * size1x);
+@value size3x: calc(3 * size1x);
+@value size4x: calc(4 * size1x);
+@value size5x: calc(5 * size1x);
+@value size6x: calc(6 * size1x);
+@value size7x: calc(7 * size1x);
+@value size8x: calc(8 * size1x);
+
+@value sizeHeaderHeight: 48px;
+
 .darkText {
   color: colorBlack;
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-:root {
-  --size1x: 8px;
-  --size2x: calc(2 * var(--size1x));
-  --size3x: calc(3 * var(--size1x));
-  --size4x: calc(4 * var(--size1x));
-  --size5x: calc(5 * var(--size1x));
-  --size6x: calc(6 * var(--size1x));
-  --size7x: calc(7 * var(--size1x));
-  --size8x: calc(8 * var(--size1x));
-
-  --headerHeight: 48px;
-  --footerHeight: 64px;
-
-  --containerMaxWidth: 1350px;
-
-  --linkColorHover: #b6866f;
-
-  --backgroundColorPrimary: rgb(49, 36, 80);
-  --backgroundColorSecondary: #2b2b2b;
-  --backgroundColorNavigation: #333;
-  --backgroundColorProject1: var(--backgroundColorSecondary);
-  --backgroundColorProject2: #2b2b2bf5;
 }
 
 html,
@@ -48,7 +41,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   color: colorTextDefault;
-  background-color: var(--backgroundColorSecondary);
+  background-color: colorBackgroundDefault;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,8 +1,8 @@
-@value theme: "../../style/theme.css";
-@value breakpointSm from theme;
+@value theme: "../../components/theme.css";
+@value breakpointSm, size4x, size8x from theme;
 
 .root {
-  max-width: var(--containerMaxWidth);
+  max-width: 1350px;
   display: flex;
   margin: 0 auto;
 }
@@ -13,7 +13,7 @@
 
 .root > *:last-child {
   flex: 1 1 auto;
-  padding: 0 var(--size8x);
+  padding: 0 size8x;
   max-width: 832px;
 }
 
@@ -31,6 +31,6 @@
   }
 
   .root > *:last-child {
-    padding: 0 var(--size4x);
+    padding: 0 size4x;
   }
 }

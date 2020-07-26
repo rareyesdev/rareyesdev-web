@@ -2,8 +2,11 @@
 // Please do not change this file!
 interface CssExports {
   'breakpointSm': string;
+  'colorBrand': string;
   'colorTextHighlight': string;
   'root': string;
+  'size2x': string;
+  'size3x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

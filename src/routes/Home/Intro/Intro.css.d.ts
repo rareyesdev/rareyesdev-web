@@ -2,6 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'arrowDownLink': string;
+  'colorBrand': string;
   'colorTextDefault': string;
   'description': string;
   'headline': string;
@@ -9,6 +10,9 @@ interface CssExports {
   'iconList': string;
   'platformIcon': string;
   'root': string;
+  'size1x': string;
+  'size2x': string;
+  'size4x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

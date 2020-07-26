@@ -1,18 +1,17 @@
+@value theme: '../../../components/theme.css';
+@value colorBrand, colorBackgroundDefaultLight, size2x, size3x from theme;
+
 .header {
   text-align: center;
   letter-spacing: 4.5px;
-  background-color: var(--backgroundColorPrimary);
+  background-color: colorBrand;
 }
 
 .header > h2 {
   margin: 0;
-  padding: var(--size3x) 0;
+  padding: size3x 0;
 }
 
-.projectOdd {
-  background-color: var(--backgroundColorProject1);
-}
-
-.projectEven {
-  background-color: var(--backgroundColorProject2);
+.container > *:nth-child(even) {
+  background-color: colorBackgroundDefaultLight;
 }

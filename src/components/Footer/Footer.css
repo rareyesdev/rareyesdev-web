@@ -1,9 +1,9 @@
-@value theme: "../../style/theme.css";
-@value breakpointSm, colorTextHighlight from theme;
+@value theme: "../../components/theme.css";
+@value breakpointSm, colorBrand, colorTextHighlight, size2x, size3x from theme;
 
 .root {
   color: colorTextHighlight;
-  background-color: var(--backgroundColorPrimary);
+  background-color: colorBrand;
 }
 
 .root ul {
@@ -17,7 +17,7 @@
 
 .root li {
   list-style: none;
-  margin: var(--size2x) var(--size3x);
+  margin: size2x size3x;
 }
 
 @media (max-width: breakpointSm) {

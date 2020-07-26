@@ -1,14 +1,14 @@
-@value theme: "../../style/theme.css";
-@value breakpointSm from theme;
+@value theme: "../theme.css";
+@value breakpointSm, size4x, size8x from theme;
 
 .mainAndFooter {
   position: relative;
-  margin-top: var(--headerHeight);
-  min-height: calc(100vh - var(--headerHeight));
+  margin-top: sizeHeaderHeight;
+  min-height: calc(100vh - sizeHeaderHeight);
 }
 
 .main {
-  padding-top: var(--size8x);
+  padding-top: size8x;
   /* Maximum height for the footer */
   padding-bottom: 102px;
   margin: 0 auto;
@@ -24,8 +24,8 @@
 
 @media (max-width: breakpointSm) {
   .main {
-    padding-top: var(--size2x);
-    padding-left: var(--size4x);
-    padding-right: var(--size4x);
+    padding-top: size2x;
+    padding-left: size4x;
+    padding-right: size4x;
   }
 }

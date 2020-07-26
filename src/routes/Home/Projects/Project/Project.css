@@ -1,4 +1,4 @@
-@value theme: '../../../../style/theme.css';
+@value theme: '../../../../components/theme.css';
 @value breakpointSm from theme;
 
 .previewPictureContainer {
