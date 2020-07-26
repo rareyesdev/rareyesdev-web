@@ -1,9 +1,14 @@
 import { FunctionComponent, h } from 'preact';
 import style from './Footer.css';
+import { cx } from '../../utils/cx';
 
-const Footer: FunctionComponent = () => {
+interface Props {
+  rootClass?: string;
+}
+
+const Footer: FunctionComponent<Props> = ({ rootClass }) => {
   return (
-    <footer class={style.root}>
+    <footer class={cx(style.root, rootClass)}>
       <ul>
         <li id="copyright">© Copyright 2020 Ramón Alejandro Reyes Fajardo</li>
         <li>

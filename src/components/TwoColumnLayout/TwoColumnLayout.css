@@ -1,3 +1,6 @@
+@value theme: "../../style/theme.css";
+@value breakpointSm from theme;
+
 .root {
   max-width: var(--containerMaxWidth);
   display: flex;
@@ -18,7 +21,7 @@
   text-align: justify;
 }
 
-@media (max-width: 768px) {
+@media (max-width: breakpointSm) {
   .root {
     flex-direction: column;
   }

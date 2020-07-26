@@ -1,4 +1,5 @@
 import { FunctionComponent, h } from 'preact';
+import { Link } from 'wouter-preact';
 import style from './Header.css';
 
 const Header: FunctionComponent = () => {
@@ -7,13 +8,13 @@ const Header: FunctionComponent = () => {
       <nav class={style.bar}>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a href="/#about">About</a>
+            <Link href="/#about">About</Link>
           </li>
           <li>
-            <a href="/#projects">Projects</a>
+            <Link href="/#projects">Projects</Link>
           </li>
         </ul>
       </nav>

@@ -1,0 +1,31 @@
+@value theme: "../../style/theme.css";
+@value breakpointSm from theme;
+
+.mainAndFooter {
+  position: relative;
+  margin-top: var(--headerHeight);
+  min-height: calc(100vh - var(--headerHeight));
+}
+
+.main {
+  padding-top: var(--size8x);
+  /* Maximum height for the footer */
+  padding-bottom: 102px;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (max-width: breakpointSm) {
+  .main {
+    padding-top: var(--size2x);
+    padding-left: var(--size4x);
+    padding-right: var(--size4x);
+  }
+}

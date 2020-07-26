@@ -1,6 +1,5 @@
 .root {
   display: inline-block;
-  color: var(--fontColorSecondary);
   padding: 4px;
   border: 2px solid;
 }

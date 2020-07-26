@@ -1,3 +1,23 @@
+@value colorBlack: #000000;
+@value colorWhite: #ffffff;
+
+@value colorTextDefault: #a8a8a8;
+@value colorTextHighlight: colorWhite;
+
+@value colorLinkDefault: colorWhite;
+@value colorLinkActive: #f06000;
+@value colorLinkHover: #b6866f;
+
+@value breakpointXs: 576px;
+@value breakpointSm: 768px;
+@value breakpointMd: 992px;
+@value breakpointLg: 1200px;
+
+.darkText {
+  color: colorBlack;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
 :root {
   --size1x: 8px;
   --size2x: calc(2 * var(--size1x));
@@ -13,11 +33,6 @@
 
   --containerMaxWidth: 1350px;
 
-  --fontColorPrimary: #fff;
-  --fontColorSecondary: #a8a8a8;
-
-  --linkColorDefault: var(--fontColorPrimary);
-  --linkColorActive: #f06000;
   --linkColorHover: #b6866f;
 
   --backgroundColorPrimary: rgb(49, 36, 80);
@@ -32,6 +47,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  color: colorTextDefault;
   background-color: var(--backgroundColorSecondary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -47,24 +63,23 @@ h1,
 h2,
 h3,
 h4 {
-  color: var(--fontColorPrimary);
+  color: colorTextHighlight;
 }
 
 a {
-  color: var(--linkColorDefault);
+  color: colorLinkDefault;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--linkColorHover);
+  color: colorLinkHover;
 }
 
 a.active {
-  color: var(--linkColorActive);
+  color: colorLinkActive;
 }
 
 p {
-  color: var(--fontColorSecondary);
   font-size: 16px;
   line-height: 30px;
 }

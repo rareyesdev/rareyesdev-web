@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "npm run dev",
-    "build": "preact build",
+    "build": "preact build --prerenderUrls src/prerender-urls.json",
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
@@ -28,7 +28,7 @@
     "preact-jsx-chai": "^3.0.0",
     "preact-markup": "^2.0.0",
     "preact-render-to-string": "^5.1.4",
-    "preact-router": "^3.2.1"
+    "wouter-preact": "^2.5.0"
   },
   "devDependencies": {
     "@types/enzyme": "^3.10.5",

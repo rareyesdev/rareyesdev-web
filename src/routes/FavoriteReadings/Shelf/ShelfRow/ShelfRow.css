@@ -1,0 +1,28 @@
+@value theme: '../../../../style/theme.css';
+@value breakpointSm, darkText from theme;
+
+.root {
+  display: flex;
+}
+
+.root ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.root li {
+  line-height: 1.5;
+}
+
+.title {
+  composes: darkText;
+}
+
+@media (max-width: breakpointSm) {
+  .root {
+    flex-direction: column;
+    margin-left: calc(-1 * var(--size4x));
+    margin-right: calc(-1 * var(--size4x));
+  }
+}

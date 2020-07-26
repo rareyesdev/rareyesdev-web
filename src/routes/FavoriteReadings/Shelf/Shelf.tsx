@@ -7,6 +7,7 @@ import style from './Shelf.css';
 type Row = keyof typeof colors;
 
 const rowNames = Object.keys(data) as Row[];
+
 const colors = {
   platinum: '#cccccc',
   gold: '#C9B037',
@@ -21,7 +22,7 @@ const Shelf: FunctionComponent = () => {
         <ShelfRow
           key={rowName}
           icon={<span>{rowName}</span>}
-          books={data[rowName]}
+          readings={data[rowName]}
           color={colors[rowName]}
         />
       ))}

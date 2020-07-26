@@ -1,15 +1,21 @@
-import { FunctionComponent, h } from 'preact';
+import { Fragment, FunctionComponent, h } from 'preact';
 import { Intro } from './Intro/Intro';
 import About from './About/About';
 import Projects from './Projects/Projects';
+import Footer from '../../components/Footer/Footer';
+import Header from '../../components/Header/Header';
 
 const Home: FunctionComponent = () => {
   return (
-    <main>
-      <Intro />
-      <About />
-      <Projects />
-    </main>
+    <Fragment>
+      <Header />
+      <main>
+        <Intro />
+        <About />
+        <Projects />
+      </main>
+      <Footer />
+    </Fragment>
   );
 };
 

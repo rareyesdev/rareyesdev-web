@@ -1,4 +1,5 @@
 import { FunctionComponent, h } from 'preact';
+import { Link } from 'wouter-preact';
 
 import style from './About.css';
 import LazyPicture from '../../../components/LazyPicture/LazyPicture';
@@ -85,7 +86,7 @@ const About: FunctionComponent = () => {
           </p>
           <p>
             When I'm not writing code, I enjoy watching StaCraft 2 tournaments,{' '}
-            <a href="/favorite-books">reading</a>, and{' '}
+            <Link href="/favorite-readings">reading</Link>, and{' '}
             <ExternalLink href="https://brilliant.org/">exercising my brain</ExternalLink>.
           </p>
         </div>

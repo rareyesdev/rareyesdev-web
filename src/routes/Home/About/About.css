@@ -1,3 +1,6 @@
+@value theme: '../../../style/theme.css';
+@value breakpointSm from theme;
+
 .root {
   background-color: var(--backgroundColorSecondary);
   padding: var(--size4x) 0;
@@ -11,7 +14,7 @@
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: breakpointSm) {
   .photoContainer img {
     max-width: 150px;
   }

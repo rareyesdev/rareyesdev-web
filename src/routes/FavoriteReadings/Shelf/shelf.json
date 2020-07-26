@@ -9,6 +9,10 @@
   ],
   "gold": [
     {
+      "title": "The Humble Programmer",
+      "author": ["Edsger W. Dijkstra"]
+    },
+    {
       "title": "You Don't Know JS",
       "author": ["Kyle Simpson"]
     },
@@ -35,6 +39,14 @@
     {
       "title": "Predictably Irrational",
       "author": ["Dan Ariely"]
+    },
+    {
+      "title": "The Pragmatic Programmer",
+      "author": ["Andy Hunt", "Dave Thomas"]
+    },
+    {
+      "title": "97 Things Every Programmer Should Know: Collective Wisdom from the Experts",
+      "author": ["Kevlin Henney"]
     }
   ]
 }

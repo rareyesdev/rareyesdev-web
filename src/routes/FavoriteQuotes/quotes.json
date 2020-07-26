@@ -1,0 +1,29 @@
+[
+  {
+    "title": "The competent programmer is fully aware of the strictly limited size of his own skull; therefore, he approaches the programming task in full humility.",
+    "author": ["Edsger W. Dijkstra"]
+  },
+  {
+    "title": "The best is the enemy of the good. Working toward perfection might prevent completion. Complete it first, and then perfect it.",
+    "author": ["Code Complete"]
+  },
+  {
+    "title": "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil.",
+    "author": ["Donald Knuth"]
+  },
+  {
+    "title": "Software's Primary Technical Imperative: Managing Complexity.",
+    "author": ["Code Complete"]
+  },
+  {
+    "title": "Don't change the code randomly. That's voodoo programming."
+  },
+  {
+    "title": "General Principle of Software Quality: Improving quality reduces development costs.",
+    "author": ["Code Complete"]
+  },
+  {
+    "title": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
+    "author": ["Martin Fowler"]
+  }
+]

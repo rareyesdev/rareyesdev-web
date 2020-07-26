@@ -4,6 +4,7 @@ import ExternalLink from '../../../components/ExternalLink/ExternalLink';
 import LinkedInIcon from './LinkedInIcon';
 import GitHubIcon from './GitHubIcon';
 import ArrowDownIcon from './ArrowDownIcon';
+import { assertValue } from '../../../utils/assertValue';
 
 export const Intro: FunctionComponent = () => {
   return (
@@ -29,7 +30,22 @@ export const Intro: FunctionComponent = () => {
           </ExternalLink>
         </li>
       </ul>
-      <a class={style.arrowDownLink} href="#about" aria-label="arrow down">
+      <a
+        class={style.arrowDownLink}
+        href="#about"
+        aria-label="arrow down"
+        onClick={e => {
+          e.preventDefault();
+          const aboutSection = document.getElementById('about');
+          if (assertValue(aboutSection)) {
+            const scrollElement = document.scrollingElement || document.documentElement;
+            scrollElement.scrollTo({
+              top: aboutSection.offsetTop,
+              behavior: 'smooth',
+            });
+          }
+        }}
+      >
         <ArrowDownIcon />
       </a>
     </section>
