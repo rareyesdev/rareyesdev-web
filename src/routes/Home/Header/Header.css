@@ -1,4 +1,4 @@
-@value theme: "../../components/theme.css";
+@value theme: "../../../components/theme.css";
 @value colorBackgroundNavigation, size2x, sizeHeaderHeight, listReset from theme;
 
 .root {
