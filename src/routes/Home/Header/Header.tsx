@@ -42,7 +42,7 @@ const Header: FunctionComponent = () => {
           <li>
             <InternalLink
               href="/"
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
                 scrollTo(0);
               }}
@@ -53,7 +53,7 @@ const Header: FunctionComponent = () => {
           <li>
             <Link
               href="/#about"
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
                 scrollTo('about');
               }}
@@ -64,7 +64,7 @@ const Header: FunctionComponent = () => {
           <li>
             <Link
               href="/#projects"
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
                 scrollTo('projects');
               }}
