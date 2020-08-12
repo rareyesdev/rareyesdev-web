@@ -1,24 +1,28 @@
 import { FunctionComponent, h } from 'preact';
 import style from './ShelfRow.css';
+import MedalIcon from '../../../../components/Icons/MedalIcon';
+import { cx } from '../../../../utils/cx';
+import BookIcon from '../../../../components/Icons/BookIcon';
 
 interface Reading {
   title: string;
 }
 
 interface Props {
-  icon: JSX.Element;
+  rootClass?: string;
   color: string;
   readings: Reading[];
 }
 
-const ShelfRow: FunctionComponent<Props> = ({ icon, color, readings }) => {
+const ShelfRow: FunctionComponent<Props> = ({ rootClass, color, readings }) => {
   return (
-    <div class={style.root} style={{ backgroundColor: color }}>
-      <div>{icon}</div>
-      <ul role="list">
-        {readings.map(reading => (
-          <li key={reading.title} class={style.title}>
-            {reading.title}
+    <div class={cx(style.root, rootClass)}>
+      <MedalIcon class={style.medalIcon} style={{ color }} />
+      <ul class={style.list} role="list">
+        {readings.map((reading) => (
+          <li key={reading.title}>
+            <BookIcon class={style.bookIcon} />
+            <div class={style.title}>{reading.title}</div>
           </li>
         ))}
       </ul>

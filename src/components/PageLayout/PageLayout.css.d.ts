@@ -5,8 +5,8 @@ interface CssExports {
   'footer': string;
   'main': string;
   'mainAndFooter': string;
+  'size2x': string;
   'size4x': string;
-  'size8x': string;
   'sizeHeaderHeight': string;
   'theme': string;
 }

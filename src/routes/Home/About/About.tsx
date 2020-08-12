@@ -71,7 +71,7 @@ const About: FunctionComponent = () => {
             Starting with{' '}
             <ExternalLink href="https://github.com/webpack/webpack">Webpack</ExternalLink> and{' '}
             <ExternalLink href="https://github.com/babel/babel">Babel</ExternalLink>, then combining{' '}
-            <ExternalLink href="https://github.com/storybookjs/storybook">Storybook</ExternalLink>,
+            <ExternalLink href="https://github.com/storybookjs/storybook">Storybook</ExternalLink>,{' '}
             <ExternalLink href="https://github.com/facebook/jest">Jest</ExternalLink> and{' '}
             <ExternalLink href="https://www.cypress.io/">Cypress</ExternalLink>. I like building
             CI/CD pipelines for every project I work on.{' '}

@@ -1,0 +1,29 @@
+@value theme: "../../theme.css";
+@value breakpointSm, sizeHeaderHeight from theme;
+
+.root {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: sizeHeaderHeight;
+  width: sizeHeaderHeight;
+  z-index: 100;
+
+  border: none;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 80%;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+}
+
+@media (min-width: breakpointSm) {
+  .root {
+    bottom: unset;
+    top: 0;
+  }
+}

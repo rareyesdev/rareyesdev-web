@@ -2,12 +2,16 @@ import { FunctionComponent, h } from 'preact';
 import { useRoute, LinkProps, Link } from 'wouter-preact';
 import { cx } from '../../utils/cx';
 
-const InternalLink: FunctionComponent<LinkProps> = props => {
+type Props = LinkProps & {
+  rootClass?: string;
+};
+
+const InternalLink: FunctionComponent<Props> = ({ rootClass, ...props }) => {
   const [isActive] = useRoute(props.href ?? props.to);
 
   return (
     <Link {...props}>
-      <a class={cx({ active: isActive })}>{props.children}</a>
+      <a class={cx({ active: isActive }, rootClass)}>{props.children}</a>
     </Link>
   );
 };

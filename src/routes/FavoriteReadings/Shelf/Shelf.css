@@ -1,0 +1,6 @@
+@value theme: '../../../components/theme.css';
+@value size6x from theme;
+
+.row {
+  margin: size6x 0;
+}

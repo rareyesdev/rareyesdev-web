@@ -1,28 +1,45 @@
 @value theme: '../../../../components/theme.css';
-@value breakpointSm, darkText, size4x from theme;
+@value size1x, size2x, size4x, breakpointSm, listReset from theme;
 
-.root {
-  display: flex;
+.medalIcon {
+  height: 60px;
+  margin: 0 auto;
+  display: block;
 }
 
-.root ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.bookIcon {
+  height: 0.6em;
+  position: absolute;
+  top: 1em;
+  transform: translateY(-50%);
+}
+
+.list {
+  composes: listReset;
+  margin-top: size1x;
 }
 
 .root li {
-  line-height: 1.5;
+  position: relative;
+  line-height: 2;
 }
 
 .title {
-  composes: darkText;
+  margin-left: 1.5em;
 }
 
-@media (max-width: breakpointSm) {
+@media (min-width: breakpointSm) {
   .root {
-    flex-direction: column;
-    margin-left: calc(-1 * size4x);
-    margin-right: calc(-1 * size4x);
+    display: flex;
+    align-items: center;
+  }
+
+  .medalIcon {
+    margin: 0;
+    margin-right: size4x;
+  }
+
+  .list {
+    margin: 0;
   }
 }

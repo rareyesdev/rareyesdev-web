@@ -9,19 +9,19 @@ type Row = keyof typeof colors;
 const rowNames = Object.keys(data) as Row[];
 
 const colors = {
-  platinum: '#cccccc',
-  gold: '#C9B037',
-  silver: '#B4B4B4',
-  bronze: '#AD8A56',
+  platinum: '#ffffff',
+  gold: '#ffd300',
+  silver: '#9a9a9a',
+  bronze: '#ab7627',
 };
 
 const Shelf: FunctionComponent = () => {
   return (
     <div>
-      {rowNames.map(rowName => (
+      {rowNames.map((rowName) => (
         <ShelfRow
           key={rowName}
-          icon={<span>{rowName}</span>}
+          rootClass={style.row}
           readings={data[rowName]}
           color={colors[rowName]}
         />

@@ -1,5 +1,5 @@
 @value theme: "../theme.css";
-@value breakpointSm, size2x, size4x, size8x, sizeHeaderHeight from theme;
+@value breakpointSm, size2x, size4x, sizeHeaderHeight from theme;
 
 .mainAndFooter {
   position: relative;
@@ -8,7 +8,7 @@
 }
 
 .main {
-  padding-top: size8x;
+  padding-top: size4x;
   /* Maximum height for the footer */
   padding-bottom: 102px;
   margin: 0 auto;
@@ -24,7 +24,7 @@
 
 @media (max-width: breakpointSm) {
   .main {
-    padding-top: size2x;
+    padding-top: 0;
     padding-left: size4x;
     padding-right: size4x;
   }
