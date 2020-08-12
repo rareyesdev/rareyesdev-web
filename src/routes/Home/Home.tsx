@@ -3,7 +3,7 @@ import { Intro } from './Intro/Intro';
 import About from './About/About';
 import Projects from './Projects/Projects';
 import Footer from '../../components/Footer/Footer';
-import Header from '../../components/Header/Header';
+import Header from './Header/Header';
 
 const Home: FunctionComponent = () => {
   return (

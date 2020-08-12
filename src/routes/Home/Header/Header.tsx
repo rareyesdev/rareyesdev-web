@@ -1,13 +1,13 @@
 import { FunctionComponent, h } from 'preact';
 import { Link } from 'wouter-preact';
 import style from './Header.css';
-import { assertValue } from '../../utils/assertValue';
-import { getRootScrollElement } from '../../utils/getScrollElement';
+import { assertValue } from '../../../utils/assertValue';
+import { getRootScrollElement } from '../../../utils/getScrollElement';
 import { useEffect, useState } from 'preact/hooks';
-import { cx } from '../../utils/cx';
-import { addScrollEventListener } from '../../utils/addScrollEventListener';
-import { sizeHeaderHeight } from '../theme';
-import InternalLink from '../InternalLink/InternalLink';
+import { cx } from '../../../utils/cx';
+import { addScrollEventListener } from '../../../utils/addScrollEventListener';
+import { sizeHeaderHeight } from '../../../components/theme';
+import InternalLink from '../../../components/InternalLink/InternalLink';
 
 const Header: FunctionComponent = () => {
   const [state, setState] = useState<string | undefined>(undefined);
