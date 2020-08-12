@@ -13,8 +13,7 @@ export const Intro: FunctionComponent = () => {
       <h1 class={style.headline}>I'm Ramón Alejandro</h1>
       <h2 class={style.description}>
         I'm a <span class={style.highlightText}>Senior Software Engineer</span>, focused on
-        fullstack web development with
-        <span class={style.highlightText}>React</span>,{' '}
+        fullstack web development with <span class={style.highlightText}>React</span>,{' '}
         <span class={style.highlightText}>TypeScript</span>, and{' '}
         <span class={style.highlightText}>GraphQL</span>.
       </h2>
