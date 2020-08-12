@@ -14,15 +14,9 @@ export default {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   webpack(config, env, helpers, options) {
     // Override localIdentName, default is "[local]__[hash:base64:5]"
-    if (config.mode === 'production') {
-      config.module.rules[4].use[1].options.modules = {
-        localIdentName: '[name]_[local]__[hash:base64:5]',
-      };
-    } else {
-      config.module.rules[4].use[1].options.modules = {
-        localIdentName: '[name]_[local]',
-      };
-    }
+    config.module.rules[4].use[1].options.modules = {
+      localIdentName: '[name]_[local]__[hash:base64:5]',
+    };
 
     // Replace default loader with a modern one.
     // config.module.rules[4].use.splice(1, 0, {
