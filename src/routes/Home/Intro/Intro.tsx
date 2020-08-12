@@ -34,7 +34,7 @@ export const Intro: FunctionComponent = () => {
         class={style.arrowDownLink}
         href="#about"
         aria-label="arrow down"
-        onClick={e => {
+        onClick={(e) => {
           e.preventDefault();
           const aboutSection = document.getElementById('about');
           if (assertValue(aboutSection)) {
