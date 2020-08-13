@@ -1,7 +1,7 @@
 import { Fragment, FunctionComponent, h } from 'preact';
 import Footer from '../../components/Footer/Footer';
 import style from './PageLayout.css';
-import Navigation from './Navigation/Navigation';
+import Navigation from '../Navigation/Navigation';
 
 const PageLayout: FunctionComponent = ({ children }) => {
   return (
