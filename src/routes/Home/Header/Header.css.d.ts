@@ -7,6 +7,7 @@ interface CssExports {
   'list': string;
   'listReset': string;
   'root': string;
+  'shadowSvgIconCssFilter': string;
   'size2x': string;
   'sizeHeaderHeight': string;
   'solid': string;

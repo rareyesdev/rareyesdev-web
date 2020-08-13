@@ -24,7 +24,7 @@
 
 @media (max-width: breakpointSm) {
   .main {
-    padding-top: 0;
+    padding-top: size2x;
     padding-left: size4x;
     padding-right: size4x;
   }

@@ -30,6 +30,8 @@
 
 @value sizeHeaderHeight: 48px;
 
+@value shadowSvgIconCssFilter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+
 /* PAGE RESET */
 
 html,

@@ -1,7 +1,6 @@
 import { FunctionComponent, h } from 'preact';
 import style from './Navigation.css';
 import InternalLink from '../InternalLink/InternalLink';
-import ArrowLeft from '../Icons/ArrowLeft';
 import { useLocation } from 'wouter-preact';
 import { useEffect, useRef } from 'preact/hooks';
 import HomeIcon from '../Icons/HomeIcon';
