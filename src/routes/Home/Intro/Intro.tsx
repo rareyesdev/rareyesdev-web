@@ -7,6 +7,7 @@ import ArrowDownIcon from '../../../components/Icons/ArrowDownIcon';
 import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
 import RandomQuote from '../../../components/RandomQuote/RandomQuote';
+import CodeSandboxIcon from '../../../components/Icons/CodesandboxIcon/CodeSandboxIcon';
 
 export const Intro: FunctionComponent = () => {
   return (
@@ -30,6 +31,11 @@ export const Intro: FunctionComponent = () => {
             <li>
               <ExternalLink href="https://github.com/rareyesdev" ariaLabel="GitHub">
                 <GitHubIcon class={style.platformIcon} />
+              </ExternalLink>
+            </li>
+            <li>
+              <ExternalLink href="https://codesandbox.io/u/rareyesdev" ariaLabel="CodeSandbox">
+                <CodeSandboxIcon />
               </ExternalLink>
             </li>
           </ul>

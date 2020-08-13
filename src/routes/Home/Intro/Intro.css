@@ -61,6 +61,7 @@
 }
 
 .platformIcon {
+  display: block;
   height: size4x;
   width: size4x;
 }
