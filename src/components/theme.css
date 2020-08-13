@@ -30,11 +30,7 @@
 
 @value sizeHeaderHeight: 48px;
 
-.listReset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+/* PAGE RESET */
 
 html,
 body {
@@ -75,4 +71,12 @@ a:hover {
 
 p {
   line-height: 1.9;
+}
+
+/* HELPERS */
+
+.listReset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

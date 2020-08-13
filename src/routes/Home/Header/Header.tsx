@@ -7,73 +7,109 @@ import { useEffect, useState } from 'preact/hooks';
 import { cx } from '../../../utils/cx';
 import { addScrollEventListener } from '../../../utils/addScrollEventListener';
 import { sizeHeaderHeight } from '../../../components/theme';
-import InternalLink from '../../../components/InternalLink/InternalLink';
+import HomeIcon from '../../../components/Icons/HomeIcon';
+import Hidden from '../../../components/Hidden/Hidden';
+import AddressCardIcon from '../../../components/Icons/AddressCardIcon';
+import TasksIcon from '../../../components/Icons/TasksIcon';
+import Navigation from '../../../components/Navigation/Navigation';
 
 const Header: FunctionComponent = () => {
-  const [state, setState] = useState<string | undefined>(undefined);
+  const [headerStyle, setHeaderStyle] = useState<string | undefined>(undefined);
+  const [activeLink, setActiveLink] = useState<'home' | 'about' | 'projects'>('home');
 
   useEffect(() => {
     const aboutSection = document.getElementById('about');
+    const projectsSection = document.getElementById('projects');
 
-    function trackNavStyle(scrollTop: number) {
+    function trackHeaderStyle(scrollTop: number) {
       if (scrollTop < sizeHeaderHeight) {
-        setState(undefined);
+        setHeaderStyle(undefined);
       } else if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight) {
-        setState(style.fadeOut);
+        setHeaderStyle(style.fadeOut);
       } else {
-        setState(style.solid);
+        setHeaderStyle(style.solid);
+      }
+    }
+
+    function trackActiveLink(scrollTop: number) {
+      if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight) {
+        setActiveLink('home');
+      } else if (scrollTop < (projectsSection?.offsetTop ?? 0) - window.innerHeight / 2) {
+        setActiveLink('about');
+      } else {
+        setActiveLink('projects');
       }
     }
 
     function onScroll(this: Element) {
-      trackNavStyle(this.scrollTop);
+      trackHeaderStyle(this.scrollTop);
+      trackActiveLink(this.scrollTop);
     }
 
     const scrollElement = getRootScrollElement();
-    trackNavStyle(scrollElement.scrollTop);
+    trackHeaderStyle(scrollElement.scrollTop);
 
     return addScrollEventListener(scrollElement, onScroll);
   }, []);
 
   return (
-    <header class={cx(style.root, state)}>
+    <header class={cx(style.root, headerStyle)}>
       <nav>
         <ul class={style.list}>
           <li>
-            <InternalLink
+            <Link
+              class={cx({ active: activeLink === 'home' })}
               href="/"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo(0);
               }}
             >
-              Home
-            </InternalLink>
+              <Hidden media="SmUp">
+                <HomeIcon />
+              </Hidden>
+              <Hidden media="Xs">
+                <span>Home</span>
+              </Hidden>
+            </Link>
           </li>
           <li>
             <Link
+              class={cx({ active: activeLink === 'about' })}
               href="/#about"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo('about');
               }}
             >
-              About
+              <Hidden media="SmUp">
+                <AddressCardIcon />
+              </Hidden>
+              <Hidden media="Xs">
+                <span>About</span>
+              </Hidden>
             </Link>
           </li>
           <li>
             <Link
+              class={cx({ active: activeLink === 'projects' })}
               href="/#projects"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo('projects');
               }}
             >
-              Projects
+              <Hidden media="SmUp">
+                <TasksIcon />
+              </Hidden>
+              <Hidden media="Xs">
+                <span>Projects</span>
+              </Hidden>
             </Link>
           </li>
         </ul>
       </nav>
+      <Navigation />
     </header>
   );
 };

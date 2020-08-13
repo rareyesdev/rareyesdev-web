@@ -4,11 +4,14 @@ import InternalLink from '../InternalLink/InternalLink';
 import ArrowLeft from '../Icons/ArrowLeft';
 import { useLocation } from 'wouter-preact';
 import { useEffect, useRef } from 'preact/hooks';
+import HomeIcon from '../Icons/HomeIcon';
 
 const Navigation: FunctionComponent = () => {
   const [location] = useLocation();
   const inputElement = useRef<HTMLInputElement>();
   const prevLocation = useRef<string | undefined>();
+
+  const isHomePage = location === '/';
 
   // close the menu on any navigation
   useEffect(() => {
@@ -31,9 +34,11 @@ const Navigation: FunctionComponent = () => {
 
   return (
     <nav class={style.root} onClick={(e) => e.stopPropagation()}>
-      <InternalLink rootClass={style.back} href="/">
-        <ArrowLeft />
-      </InternalLink>
+      {!isHomePage && (
+        <InternalLink rootClass={style.home} href="/">
+          <HomeIcon />
+        </InternalLink>
+      )}
       <div class={style.hamburger}>
         <input ref={inputElement} type="checkbox" id="menu" class={style.menuInput} />
         <label htmlFor="menu" class={style.menuLabel}>

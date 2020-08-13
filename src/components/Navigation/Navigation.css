@@ -9,7 +9,7 @@
 .root svg {
   display: block;
   margin: auto;
-  height: 80%;
+  height: 70%;
   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 }
 
@@ -21,9 +21,9 @@
   cursor: pointer;
 }
 
-/* back button */
+/* home button */
 
-.back {
+.home {
   composes: link;
   bottom: 0;
   right: 0;
@@ -81,6 +81,10 @@
   top: 10px;
 }
 
+.menuInput:checked + .menuLabel {
+  background-color: colorBackgroundNavigation;
+}
+
 .menuInput:checked + .menuLabel .menuBars {
   background-color: transparent;
   box-shadow: none;
@@ -136,7 +140,7 @@
     min-width: 300px;
   }
 
-  .back {
+  .home {
     bottom: unset;
     right: unset;
     top: 0;

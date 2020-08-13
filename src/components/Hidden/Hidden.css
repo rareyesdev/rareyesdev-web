@@ -1,0 +1,14 @@
+@value theme: "../theme.css";
+@value breakpointXs from theme;
+
+@media (max-width: breakpointXs) {
+  .Xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: breakpointXs) {
+  .SmUp {
+    display: none !important;
+  }
+}

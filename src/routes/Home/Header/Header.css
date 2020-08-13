@@ -1,5 +1,5 @@
 @value theme: "../../../components/theme.css";
-@value colorBackgroundNavigation, size2x, sizeHeaderHeight, listReset from theme;
+@value colorBackgroundNavigation, size2x, sizeHeaderHeight, listReset, breakpointXs from theme;
 
 .root {
   position: fixed;
@@ -10,6 +10,11 @@
   text-transform: uppercase;
   letter-spacing: 2.5px;
   transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.root svg {
+  display: block;
+  height: 32px;
 }
 
 .solid {
@@ -26,10 +31,15 @@
   composes: listReset;
   display: flex;
   align-items: center;
-  justify-content: center;
   height: sizeHeaderHeight;
 }
 
 .list li {
   margin: 0 size2x;
+}
+
+@media (min-width: breakpointXs) {
+  .list {
+    justify-content: center;
+  }
 }
