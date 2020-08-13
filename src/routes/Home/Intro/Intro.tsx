@@ -1,9 +1,9 @@
 import { FunctionComponent, h } from 'preact';
 import style from './Intro.css';
 import ExternalLink from '../../../components/ExternalLink/ExternalLink';
-import LinkedInIcon from './LinkedInIcon';
-import GitHubIcon from './GitHubIcon';
-import ArrowDownIcon from './ArrowDownIcon';
+import LinkedInIcon from '../../../components/Icons/LinkedInIcon';
+import GitHubIcon from '../../../components/Icons/GitHubIcon';
+import ArrowDownIcon from '../../../components/Icons/ArrowDownIcon';
 import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
 import RandomQuote from '../../../components/RandomQuote/RandomQuote';
