@@ -1,7 +1,9 @@
 import { FunctionComponent, h } from 'preact';
 import Shelf from './Shelf/Shelf';
+import { usePageTitle } from '../../utils/usePageTitle';
 
 const FavoriteReadings: FunctionComponent = () => {
+  usePageTitle('Favorite Readings');
   return (
     <div>
       <h1>Favorite Readings</h1>

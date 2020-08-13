@@ -1,11 +1,14 @@
 [
 	{
-		"url": "/"
+		"url": "/",
+		"title": "rareyes.dev"
 	},
 	{
-		"url": "/favorite-readings"
+		"url": "/favorite-readings",
+		"title": "rareyes.dev | Favorite Readings"
 	},
 	{
-		"url": "/favorite-quotes"
+		"url": "/favorite-quotes",
+		"title": "rareyes.dev | Favorite Quotes"
 	}
 ]
