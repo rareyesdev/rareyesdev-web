@@ -1,0 +1,29 @@
+[
+  {
+    "quote": "General Principle of Software Quality: Improving quality reduces development costs",
+    "author": "Code Complete"
+  },
+  {
+    "quote": "The competent programmer is fully aware of the strictly limited size of his own skull; therefore, he approaches the programming task in full humility",
+    "author": "Edsger W. Dijkstra"
+  },
+  {
+    "quote": "The best is the enemy of the good. Working toward perfection might prevent completion. Complete it first, and then perfect it",
+    "author": "Code Complete"
+  },
+  {
+    "quote": "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil",
+    "author": "Donald Knuth"
+  },
+  {
+    "quote": "Software's primary technical imperative is to manage complexity",
+    "author": "Code Complete"
+  },
+  {
+    "quote": "Don't change the code randomly. That's voodoo programming"
+  },
+  {
+    "quote": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand",
+    "author": "Martin Fowler"
+  }
+]

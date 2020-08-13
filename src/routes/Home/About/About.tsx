@@ -67,16 +67,19 @@ const About: FunctionComponent = () => {
             bit later and since then I haven't stopped learning about them.
           </p>
           <p>
-            Even when I spend most of my time writing TypeScript, my second passion is Automation.
-            Starting with{' '}
+            I spend most of my time writing Frontend code using React and TypeScript, but I'm very
+            passionate about automation. When the projects requires it, I'm comfortable creating
+            custom builds using{' '}
             <ExternalLink href="https://github.com/webpack/webpack">Webpack</ExternalLink> and{' '}
-            <ExternalLink href="https://github.com/babel/babel">Babel</ExternalLink>, then combining{' '}
+            <ExternalLink href="https://github.com/babel/babel">Babel</ExternalLink>. I also like to
+            use a combination of{' '}
             <ExternalLink href="https://github.com/storybookjs/storybook">Storybook</ExternalLink>,{' '}
             <ExternalLink href="https://github.com/facebook/jest">Jest</ExternalLink> and{' '}
-            <ExternalLink href="https://www.cypress.io/">Cypress</ExternalLink>. I like building
-            CI/CD pipelines for every project I work on.{' '}
+            <ExternalLink href="https://www.cypress.io/">Cypress</ExternalLink> in order to create a
+            good testing experience. On top of that I believe that a CI/CD pipeline is a must have
+            for most projects.{' '}
             <ExternalLink href="https://github.com/features/actions">Github Actions</ExternalLink>{' '}
-            are my preferred way to go because I like to keep my list of dependencies short. I
+            is my preferred way to go but I've also used GitLab CI, Jenkins, and Travis CI. I
             usually combine them with{' '}
             <ExternalLink href="https://github.com/lerna/lerna">Lerna</ExternalLink> or{' '}
             <ExternalLink href="https://github.com/semantic-release/semantic-release">
