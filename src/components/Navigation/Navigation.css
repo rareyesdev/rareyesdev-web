@@ -35,6 +35,12 @@
   composes: link;
   top: 0;
   right: 0;
+  padding: 0;
+  display: block;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
 }
 
 .menuInput {
@@ -45,6 +51,7 @@
   display: block;
   position: relative;
   width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
