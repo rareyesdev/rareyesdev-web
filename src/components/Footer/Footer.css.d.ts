@@ -6,8 +6,9 @@ interface CssExports {
   'colorTextHighlight': string;
   'list': string;
   'listReset': string;
+  'pageSpeedImage': string;
   'root': string;
-  'size2x': string;
+  'size1x': string;
   'size3x': string;
   'theme': string;
 }

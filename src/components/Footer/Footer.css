@@ -1,9 +1,14 @@
 @value theme: "../../components/theme.css";
-@value breakpointSm, colorBrand, colorTextHighlight, size2x, size3x, listReset from theme;
+@value breakpointSm, colorBrand, colorTextHighlight, size1x, size3x, listReset from theme;
 
 .root {
   color: colorTextHighlight;
   background-color: colorBrand;
+  padding: size1x 0;
+}
+
+.root svg {
+  display: block;
 }
 
 .list {
@@ -15,7 +20,12 @@
 }
 
 .list li {
-  margin: size2x size3x;
+  margin: size1x size3x;
+}
+
+.pageSpeedImage img {
+  height: 60px;
+  display: block;
 }
 
 @media (max-width: breakpointSm) {
@@ -24,7 +34,7 @@
     flex-direction: column;
   }
 
-  .list li:not(:last-child) {
-    margin-bottom: 0;
+  .pageSpeedImage {
+    order: 1;
   }
 }
