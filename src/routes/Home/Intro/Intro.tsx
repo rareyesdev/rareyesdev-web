@@ -7,7 +7,7 @@ import ArrowDownIcon from '../../../components/Icons/ArrowDownIcon';
 import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
 import RandomQuote from '../../../components/RandomQuote/RandomQuote';
-import CodeSandboxIcon from '../../../components/Icons/CodesandboxIcon/CodeSandboxIcon';
+import CodeSandboxIcon from '../../../components/Icons/CodeSandboxIcon/CodeSandboxIcon';
 
 export const Intro: FunctionComponent = () => {
   return (
