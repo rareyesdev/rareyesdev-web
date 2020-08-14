@@ -1,6 +1,6 @@
 {
-  "name": "rareyesdev-web",
-  "short_name": "rareyesdev-web",
+  "name": "rareyesdev",
+  "short_name": "rareyesdev",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
