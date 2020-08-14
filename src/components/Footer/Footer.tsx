@@ -1,7 +1,7 @@
 import { FunctionComponent, h } from 'preact';
 import style from './Footer.css';
 import { cx } from '../../utils/cx';
-import DeploysByNetlifyIcon from '../Icons/DeploysByNetlifyIcon';
+import LazyPicture from '../LazyPicture/LazyPicture';
 
 const year = new Date().getFullYear();
 
@@ -25,15 +25,22 @@ const Footer: FunctionComponent<Props> = ({ rootClass }) => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            <img
-              src="https://www.gstatic.com/images/icons/material/product/2x/pagespeed_64dp.png"
-              alt="PageSpeed Insights"
-            />
+            <LazyPicture>
+              <img
+                data-srcset="https://www.gstatic.com/images/icons/material/product/2x/pagespeed_64dp.png"
+                alt="PageSpeed Insights"
+              />
+            </LazyPicture>
           </a>
         </li>
         <li>
           <a href="https://www.netlify.com/" rel="noopener noreferrer" target="_blank">
-            <DeploysByNetlifyIcon />
+            <LazyPicture>
+              <img
+                data-srcset="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
+                alt="Deploys by netlify"
+              />
+            </LazyPicture>
           </a>
         </li>
       </ul>

@@ -2,24 +2,17 @@
 @value breakpointSm, size2x, size4x, sizeHeaderHeight from theme;
 
 .mainAndFooter {
-  position: relative;
   margin-top: sizeHeaderHeight;
   min-height: calc(100vh - sizeHeaderHeight);
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
-  padding-top: size4x;
-  /* Maximum height for the footer */
-  padding-bottom: 102px;
+  flex: 1;
+  padding: size4x 0;
   margin: 0 auto;
   max-width: 720px;
-}
-
-.footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 @media (max-width: breakpointSm) {

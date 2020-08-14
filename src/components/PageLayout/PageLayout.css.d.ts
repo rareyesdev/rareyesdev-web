@@ -2,7 +2,6 @@
 // Please do not change this file!
 interface CssExports {
   'breakpointSm': string;
-  'footer': string;
   'main': string;
   'mainAndFooter': string;
   'size2x': string;

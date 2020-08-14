@@ -10,6 +10,7 @@ interface CssExports {
   'root': string;
   'size1x': string;
   'size3x': string;
+  'sizeHeaderHeight': string;
   'theme': string;
 }
 export const cssExports: CssExports;

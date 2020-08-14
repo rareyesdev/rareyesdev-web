@@ -9,7 +9,7 @@ const PageLayout: FunctionComponent = ({ children }) => {
       <Navigation />
       <div class={style.mainAndFooter}>
         <main class={style.main}>{children}</main>
-        <Footer rootClass={style.footer} />
+        <Footer />
       </div>
     </Fragment>
   );
