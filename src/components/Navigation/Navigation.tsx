@@ -39,7 +39,7 @@ const Navigation: FunctionComponent = () => {
         </InternalLink>
       )}
       {/* This element has to be a button. Otherwise in iOS the Home and Hamburger buttons will not maintain "position: fixed" when scrolling. I have no idea why this happens */}
-      <button class={style.hamburger}>
+      <button class={style.hamburger} aria-label="Hamburger menu">
         <input ref={inputElement} type="checkbox" id="menu" class={style.menuInput} />
         <label htmlFor="menu" class={style.menuLabel}>
           <div class={style.menuBars} />

@@ -60,6 +60,7 @@ const Header: FunctionComponent = () => {
             <Link
               class={cx({ active: activeLink === 'home' })}
               href="/"
+              aria-label="Home - Intro"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo(0);
@@ -77,6 +78,7 @@ const Header: FunctionComponent = () => {
             <Link
               class={cx({ active: activeLink === 'about' })}
               href="/#about"
+              aria-label="Home - About"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo('about');
@@ -94,6 +96,7 @@ const Header: FunctionComponent = () => {
             <Link
               class={cx({ active: activeLink === 'projects' })}
               href="/#projects"
+              aria-label="Home - Projects"
               onClick={(e) => {
                 e.preventDefault();
                 scrollTo('projects');

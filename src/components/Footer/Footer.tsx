@@ -24,6 +24,7 @@ const Footer: FunctionComponent<Props> = ({ rootClass }) => {
             href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.rareyes.dev%2F&tab=mobile"
             rel="noopener noreferrer"
             target="_blank"
+            aria-label="PageSpeed Insights"
           >
             <LazyPicture>
               <img
@@ -34,7 +35,12 @@ const Footer: FunctionComponent<Props> = ({ rootClass }) => {
           </a>
         </li>
         <li>
-          <a href="https://www.netlify.com/" rel="noopener noreferrer" target="_blank">
+          <a
+            href="https://www.netlify.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Deploys by netlify"
+          >
             <LazyPicture>
               <img
                 data-srcset="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
