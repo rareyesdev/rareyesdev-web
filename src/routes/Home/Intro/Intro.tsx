@@ -8,6 +8,7 @@ import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
 import RandomQuote from '../../../components/RandomQuote/RandomQuote';
 import CodeSandboxIcon from '../../../components/Icons/CodeSandboxIcon/CodeSandboxIcon';
+import { getSizeHeaderHeight } from '../../../components/theme';
 
 export const Intro: FunctionComponent = () => {
   return (
@@ -52,7 +53,7 @@ export const Intro: FunctionComponent = () => {
           if (assertValue(aboutSection)) {
             const scrollElement = getRootScrollElement();
             scrollElement.scrollTo({
-              top: aboutSection.offsetTop,
+              top: aboutSection.offsetTop - getSizeHeaderHeight(),
               behavior: 'smooth',
             });
           }
