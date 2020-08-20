@@ -1,5 +1,5 @@
 @value theme: "../theme.css";
-@value breakpointXs, sizeHeaderHeight, colorBackgroundNavigation, colorLinkDefault, colorLinkHover, listReset from theme;
+@value breakpointXs, colorBackgroundNavigation, colorLinkDefault, colorLinkHover, listReset from theme;
 
 .root {
   position: fixed;
@@ -14,8 +14,8 @@
 
 .link {
   position: fixed;
-  height: sizeHeaderHeight;
-  width: sizeHeaderHeight;
+  height: var(--sizeHeaderHeight);
+  width: var(--sizeHeaderHeight);
   display: flex;
   cursor: pointer;
 }
@@ -118,7 +118,7 @@
   composes: listReset;
   position: absolute;
   right: 0;
-  top: sizeHeaderHeight;
+  top: var(--sizeHeaderHeight);
   max-height: 0;
   min-width: 100vw;
   overflow: hidden;

@@ -14,7 +14,6 @@ interface CssExports {
   'menuLabel': string;
   'menuList': string;
   'root': string;
-  'sizeHeaderHeight': string;
   'theme': string;
 }
 export const cssExports: CssExports;

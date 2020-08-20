@@ -1,5 +1,5 @@
 @value theme: "../../../components/theme.css";
-@value colorBackgroundNavigation, size2x, sizeHeaderHeight, listReset, breakpointXs, shadowSvgIconCssFilter from theme;
+@value colorBackgroundNavigation, size2x, listReset, breakpointXs, shadowSvgIconCssFilter from theme;
 
 .root {
   position: fixed;
@@ -31,7 +31,7 @@
   composes: listReset;
   display: flex;
   align-items: center;
-  height: sizeHeaderHeight;
+  height: var(--sizeHeaderHeight);
 }
 
 .list li {
@@ -40,7 +40,7 @@
 
 .list li:first-child {
   /* align with the same Home Icon in navigation */
-  margin-left: 6px;
+  margin-left: 14px;
 }
 
 @media (min-width: breakpointXs) {

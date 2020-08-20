@@ -1,9 +1,9 @@
 @value theme: "../theme.css";
-@value breakpointSm, size2x, size4x, sizeHeaderHeight from theme;
+@value breakpointSm, size2x, size4x from theme;
 
 .mainAndFooter {
-  margin-top: sizeHeaderHeight;
-  min-height: calc(100vh - sizeHeaderHeight);
+  margin-top: var(--sizeHeaderHeight);
+  min-height: calc(100vh - var(--sizeHeaderHeight));
   display: flex;
   flex-direction: column;
 }

@@ -1,10 +1,10 @@
 @value theme: "../../components/theme.css";
-@value breakpointSm, colorBrand, colorTextHighlight, size1x, size3x, sizeHeaderHeight, listReset from theme;
+@value breakpointSm, colorBrand, colorTextHighlight, size1x, size3x, listReset from theme;
 
 .root {
   color: colorTextHighlight;
   background-color: colorBrand;
-  min-height: sizeHeaderHeight;
+  min-height: var(--sizeHeaderHeight);
   padding: size1x 0;
 }
 

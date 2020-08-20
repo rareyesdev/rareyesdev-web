@@ -28,9 +28,17 @@
 @value size7x: calc(7 * size1x);
 @value size8x: calc(8 * size1x);
 
-@value sizeHeaderHeight: 48px;
-
 @value shadowSvgIconCssFilter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+
+:root {
+  --sizeHeaderHeight: 64px;
+}
+
+@media (min-width: breakpointXs) {
+  :root {
+    --sizeHeaderHeight: 48px;
+  }
+}
 
 /* PAGE RESET */
 

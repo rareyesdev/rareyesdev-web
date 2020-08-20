@@ -9,7 +9,6 @@ interface CssExports {
   'root': string;
   'shadowSvgIconCssFilter': string;
   'size2x': string;
-  'sizeHeaderHeight': string;
   'solid': string;
   'theme': string;
 }

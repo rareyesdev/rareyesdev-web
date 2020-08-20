@@ -5,6 +5,10 @@
   padding: size4x 0;
 }
 
+.photoContainer {
+  text-align: center;
+}
+
 .photoContainer img {
   margin: auto;
   border-radius: 100%;
