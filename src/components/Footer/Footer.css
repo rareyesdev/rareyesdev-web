@@ -8,10 +8,6 @@
   padding: size1x 0;
 }
 
-.root svg {
-  display: block;
-}
-
 .list {
   composes: listReset;
   display: flex;
@@ -23,18 +19,26 @@
   margin: size1x size3x;
 }
 
-.pageSpeedImage img {
-  height: 60px;
-  display: block;
+.perfLinks {
+  display: flex;
+  align-items: center;
+}
+
+.pageSpeedInsightsLink {
+  padding-top: 2px;
+}
+
+.webDevMeasureLink {
+  /* background color of the PageSpeed Insights icon */
+  background-color: #e3e3e3;
+  padding: 11px 6px 4px;
+  border-radius: 5px;
+  margin-left: calc(2 * size3x);
 }
 
 @media (max-width: breakpointSm) {
   .list {
     text-align: center;
     flex-direction: column;
-  }
-
-  .pageSpeedImage {
-    order: 1;
   }
 }

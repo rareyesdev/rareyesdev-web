@@ -2,6 +2,7 @@ import { FunctionComponent, h } from 'preact';
 import style from './LazyPicture.css';
 import { useEffect, useRef } from 'preact/hooks';
 import { assertValue } from '../../utils/assertValue';
+import { cx } from '../../utils/cx';
 
 const LazyPicture: FunctionComponent = ({ children }) => {
   const rootElement = useRef<HTMLPictureElement>();
@@ -11,7 +12,7 @@ const LazyPicture: FunctionComponent = ({ children }) => {
     }
   }, []);
   return (
-    <picture ref={rootElement} class={style.root}>
+    <picture ref={rootElement} class={cx(style.root, style.notLoaded)}>
       {children}
     </picture>
   );
@@ -37,7 +38,7 @@ function observe(picture: HTMLElement) {
           const picture = entry.target;
           loadNow(picture as HTMLElement);
           observer?.unobserve(picture);
-          picture.classList.remove(style.root);
+          picture.classList.remove(style.notLoaded);
         }
       });
     });

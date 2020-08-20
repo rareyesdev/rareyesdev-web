@@ -6,7 +6,6 @@
 }
 
 .photoContainer img {
-  display: block;
   margin: auto;
   border-radius: 100%;
   max-width: 300px;

@@ -75,6 +75,10 @@ p {
   line-height: 1.9;
 }
 
+svg {
+  display: block;
+}
+
 /* HELPERS */
 
 .listReset {

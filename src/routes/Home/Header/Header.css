@@ -13,7 +13,6 @@
 }
 
 .root svg {
-  display: block;
   height: 32px;
   filter: shadowSvgIconCssFilter;
 }

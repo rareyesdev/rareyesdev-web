@@ -2,7 +2,7 @@ import { FunctionComponent, h } from 'preact';
 import style from './Project.css';
 import TwoColumnLayout from '../../../../components/TwoColumnLayout/TwoColumnLayout';
 import ExternalLink from '../../../../components/ExternalLink/ExternalLink';
-import ExternalLinkIcon from '../../../../components/ExternalLinkIcon/ExternalLinkIcon';
+import ExternalLinkIcon from '../../../../components/Icons/ExternalLinkIcon';
 import BadgeCollection from '../../../../components/BadgeCollection/BadgeCollection';
 import { cx } from '../../../../utils/cx';
 
@@ -31,7 +31,7 @@ const Project: FunctionComponent<Props> = ({
         <div class={style.rightColumn}>
           <h2>
             <ExternalLink href={title.href}>
-              {title.value} <ExternalLinkIcon />
+              {title.value} <ExternalLinkIcon class={style.externalLinkIcon} />
             </ExternalLink>
           </h2>
           {description}

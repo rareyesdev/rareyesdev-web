@@ -17,6 +17,10 @@
   padding-bottom: size6x;
 }
 
+.externalLinkIcon {
+  display: inline;
+}
+
 @media (max-width: breakpointSm) {
   .previewPictureContainer {
     flex: initial;

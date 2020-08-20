@@ -6,12 +6,14 @@ interface CssExports {
   'colorTextHighlight': string;
   'list': string;
   'listReset': string;
-  'pageSpeedImage': string;
+  'pageSpeedInsightsLink': string;
+  'perfLinks': string;
   'root': string;
   'size1x': string;
   'size3x': string;
   'sizeHeaderHeight': string;
   'theme': string;
+  'webDevMeasureLink': string;
 }
 export const cssExports: CssExports;
 export default cssExports;

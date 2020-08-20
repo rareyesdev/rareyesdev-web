@@ -2,6 +2,7 @@
 // Please do not change this file!
 interface CssExports {
   'breakpointSm': string;
+  'externalLinkIcon': string;
   'previewPictureContainer': string;
   'rightColumn': string;
   'size6x': string;

@@ -22,8 +22,8 @@ const Projects: FunctionComponent = () => {
                 data-srcset="/assets/images/home/projects/json-viewer-project-preview-100-2x.png 2x"
               />
               <img
-                width="2000"
-                height="2000"
+                width="440"
+                height="509"
                 data-srcset="/assets/images/home/projects/json-viewer-project-preview-100-2x.png 2x"
                 alt="json viewer project preview"
               />
@@ -81,8 +81,8 @@ const Projects: FunctionComponent = () => {
                 data-srcset="/assets/images/home/projects/habit-tracker-project-preview-100-2x.png 2x"
               />
               <img
-                width="2000"
-                height="2000"
+                width="440"
+                height="511"
                 data-srcset="/assets/images/home/projects/habit-tracker-project-preview-100-2x.png 2x"
                 alt="habits tracker project preview"
               />
