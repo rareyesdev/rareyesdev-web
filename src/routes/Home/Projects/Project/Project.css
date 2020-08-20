@@ -24,6 +24,5 @@
 @media (max-width: breakpointSm) {
   .previewPictureContainer {
     flex: initial;
-    max-width: 440px;
   }
 }

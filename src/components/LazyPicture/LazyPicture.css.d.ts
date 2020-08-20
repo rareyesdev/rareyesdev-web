@@ -2,7 +2,6 @@
 // Please do not change this file!
 interface CssExports {
   'fadeIn': string;
-  'notLoaded': string;
   'root': string;
 }
 export const cssExports: CssExports;

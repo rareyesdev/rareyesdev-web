@@ -20,23 +20,25 @@
 @value breakpointLg: 1200px;
 
 @value size1x: 8px;
-@value size2x: calc(2 * size1x);
-@value size3x: calc(3 * size1x);
-@value size4x: calc(4 * size1x);
-@value size5x: calc(5 * size1x);
-@value size6x: calc(6 * size1x);
-@value size7x: calc(7 * size1x);
-@value size8x: calc(8 * size1x);
+@value size2x: 16px;
+@value size3x: 24px;
+@value size4x: 32px;
+@value size5x: 40px;
+@value size6x: 48px;
+@value size7x: 56px;
+@value size8x: 64px;
 
 @value shadowSvgIconCssFilter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
 
 :root {
   --sizeHeaderHeight: 64px;
+  --sizeArrowDownIconSpaceBottom: 80px;
 }
 
 @media (min-width: breakpointXs) {
   :root {
     --sizeHeaderHeight: 48px;
+    --sizeArrowDownIconSpaceBottom: size4x;
   }
 }
 
@@ -83,6 +85,7 @@ p {
   line-height: 1.9;
 }
 
+img,
 svg {
   display: block;
 }

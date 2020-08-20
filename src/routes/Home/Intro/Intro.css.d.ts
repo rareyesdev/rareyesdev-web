@@ -20,7 +20,6 @@ interface CssExports {
   'size6x': string;
   'size8x': string;
   'sizeArrowDownIcon': string;
-  'sizeArrowDownIconSpaceBottom': string;
   'theme': string;
 }
 export const cssExports: CssExports;

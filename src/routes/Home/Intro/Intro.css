@@ -2,7 +2,6 @@
 @value colorBrand, colorTextDefault, breakpointSm, size1x, size2x, size4x, size6x, size8x from theme;
 
 @value sizeArrowDownIcon: size6x;
-@value sizeArrowDownIconSpaceBottom: size4x;
 
 .root {
   background-attachment: fixed;
@@ -16,7 +15,7 @@
 }
 
 .content {
-  height: calc(100% - sizeArrowDownIcon - sizeArrowDownIconSpaceBottom);
+  height: calc(100% - sizeArrowDownIcon - var(--sizeArrowDownIconSpaceBottom));
   margin: 0 size1x;
   display: flex;
   flex-direction: column;
@@ -72,7 +71,7 @@
 .arrowDownLink {
   position: absolute;
   left: 50%;
-  bottom: sizeArrowDownIconSpaceBottom;
+  bottom: var(--sizeArrowDownIconSpaceBottom);
   transform: translateX(-50%);
 }
 

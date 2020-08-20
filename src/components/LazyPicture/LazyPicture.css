@@ -1,8 +1,4 @@
-.root img {
-  display: inline;
-}
-
-.notLoaded {
+.root {
   visibility: hidden;
 }
 

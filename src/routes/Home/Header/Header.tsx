@@ -3,10 +3,10 @@ import { Link } from 'wouter-preact';
 import style from './Header.css';
 import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useState, useRef } from 'preact/hooks';
 import { cx } from '../../../utils/cx';
 import { addScrollEventListener } from '../../../utils/addScrollEventListener';
-import { sizeHeaderHeight } from '../../../components/theme';
+import { getSizeHeaderHeight } from '../../../components/theme';
 import HomeIcon from '../../../components/Icons/HomeIcon';
 import Hidden from '../../../components/Hidden/Hidden';
 import AddressCardIcon from '../../../components/Icons/AddressCardIcon';
@@ -16,15 +16,32 @@ import Navigation from '../../../components/Navigation/Navigation';
 const Header: FunctionComponent = () => {
   const [headerStyle, setHeaderStyle] = useState<string | undefined>(undefined);
   const [activeLink, setActiveLink] = useState<'home' | 'about' | 'projects'>('home');
+  const sizeHeaderHeight = useRef(48);
+
+  useEffect(() => {
+    sizeHeaderHeight.current = getSizeHeaderHeight();
+
+    let timeout = 0;
+    function onResize() {
+      if (!timeout) {
+        timeout = window.setTimeout(() => {
+          sizeHeaderHeight.current = getSizeHeaderHeight();
+          timeout = 0;
+        }, 1000);
+      }
+    }
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   useEffect(() => {
     const aboutSection = document.getElementById('about');
     const projectsSection = document.getElementById('projects');
 
     function trackHeaderStyle(scrollTop: number) {
-      if (scrollTop < sizeHeaderHeight) {
+      if (scrollTop < sizeHeaderHeight.current) {
         setHeaderStyle(undefined);
-      } else if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight) {
+      } else if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight.current) {
         setHeaderStyle(style.fadeOut);
       } else {
         setHeaderStyle(style.solid);
@@ -32,7 +49,7 @@ const Header: FunctionComponent = () => {
     }
 
     function trackActiveLink(scrollTop: number) {
-      if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight) {
+      if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight.current) {
         setActiveLink('home');
       } else if (scrollTop < (projectsSection?.offsetTop ?? 0) - window.innerHeight / 2) {
         setActiveLink('about');
@@ -63,7 +80,7 @@ const Header: FunctionComponent = () => {
               aria-label="Home - Intro"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo(0);
+                scrollTo(0, sizeHeaderHeight.current);
               }}
             >
               <Hidden media="SmUp">
@@ -81,7 +98,7 @@ const Header: FunctionComponent = () => {
               aria-label="Home - About"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo('about');
+                scrollTo('about', sizeHeaderHeight.current);
               }}
             >
               <Hidden media="SmUp">
@@ -99,7 +116,7 @@ const Header: FunctionComponent = () => {
               aria-label="Home - Projects"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo('projects');
+                scrollTo('projects', sizeHeaderHeight.current);
               }}
             >
               <Hidden media="SmUp">
@@ -119,7 +136,7 @@ const Header: FunctionComponent = () => {
 
 export default Header;
 
-function scrollTo(target: string | number) {
+function scrollTo(target: string | number, sizeHeaderHeight: number) {
   window.setTimeout(() => {
     let top = 0;
     if (typeof target === 'string') {
