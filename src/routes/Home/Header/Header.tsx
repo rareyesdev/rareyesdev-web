@@ -3,7 +3,7 @@ import { Link } from 'wouter-preact';
 import style from './Header.css';
 import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
-import { useEffect, useState, useRef } from 'preact/hooks';
+import { useEffect, useState } from 'preact/hooks';
 import { cx } from '../../../utils/cx';
 import { addScrollEventListener } from '../../../utils/addScrollEventListener';
 import { getSizeHeaderHeight } from '../../../components/theme';
@@ -16,32 +16,16 @@ import Navigation from '../../../components/Navigation/Navigation';
 const Header: FunctionComponent = () => {
   const [headerStyle, setHeaderStyle] = useState<string | undefined>(undefined);
   const [activeLink, setActiveLink] = useState<'home' | 'about' | 'projects'>('home');
-  const sizeHeaderHeight = useRef(48);
-
-  useEffect(() => {
-    sizeHeaderHeight.current = getSizeHeaderHeight();
-
-    let timeout = 0;
-    function onResize() {
-      if (!timeout) {
-        timeout = window.setTimeout(() => {
-          sizeHeaderHeight.current = getSizeHeaderHeight();
-          timeout = 0;
-        }, 1000);
-      }
-    }
-    window.addEventListener('resize', onResize);
-    return () => window.removeEventListener('resize', onResize);
-  }, []);
 
   useEffect(() => {
     const aboutSection = document.getElementById('about');
     const projectsSection = document.getElementById('projects');
 
     function trackHeaderStyle(scrollTop: number) {
-      if (scrollTop < sizeHeaderHeight.current) {
+      const sizeHeaderHeight = getSizeHeaderHeight();
+      if (scrollTop < sizeHeaderHeight) {
         setHeaderStyle(undefined);
-      } else if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight.current) {
+      } else if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight) {
         setHeaderStyle(style.fadeOut);
       } else {
         setHeaderStyle(style.solid);
@@ -49,7 +33,7 @@ const Header: FunctionComponent = () => {
     }
 
     function trackActiveLink(scrollTop: number) {
-      if (scrollTop < (aboutSection?.offsetTop ?? 0) - sizeHeaderHeight.current) {
+      if (scrollTop < (aboutSection?.offsetTop ?? 0) - getSizeHeaderHeight()) {
         setActiveLink('home');
       } else if (scrollTop < (projectsSection?.offsetTop ?? 0) - window.innerHeight / 2) {
         setActiveLink('about');
@@ -80,7 +64,7 @@ const Header: FunctionComponent = () => {
               aria-label="Home - Intro"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo(0, sizeHeaderHeight.current);
+                scrollTo(0);
               }}
             >
               <Hidden media="SmUp">
@@ -98,7 +82,7 @@ const Header: FunctionComponent = () => {
               aria-label="Home - About"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo('about', sizeHeaderHeight.current);
+                scrollTo('about');
               }}
             >
               <Hidden media="SmUp">
@@ -116,7 +100,7 @@ const Header: FunctionComponent = () => {
               aria-label="Home - Projects"
               onClick={(e) => {
                 e.preventDefault();
-                scrollTo('projects', sizeHeaderHeight.current);
+                scrollTo('projects');
               }}
             >
               <Hidden media="SmUp">
@@ -136,13 +120,13 @@ const Header: FunctionComponent = () => {
 
 export default Header;
 
-function scrollTo(target: string | number, sizeHeaderHeight: number) {
+function scrollTo(target: string | number) {
   window.setTimeout(() => {
     let top = 0;
     if (typeof target === 'string') {
       const targetElement = document.getElementById(target);
       if (assertValue(targetElement)) {
-        top = targetElement.offsetTop - sizeHeaderHeight;
+        top = targetElement.offsetTop - getSizeHeaderHeight();
       }
     } else {
       top = target;

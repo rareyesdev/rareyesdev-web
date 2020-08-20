@@ -3,6 +3,7 @@
 
 .previewPictureContainer {
   align-self: center;
+  max-width: 100%;
 }
 
 .previewPictureContainer img {
