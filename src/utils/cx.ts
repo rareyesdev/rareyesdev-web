@@ -1,4 +1,4 @@
-type Option = string | { [key: string]: unknown } | null | undefined;
+type Option = string | { [key: string]: boolean } | null | undefined | Option[];
 
 export function cx(...options: Option[]) {
   const classes = [] as string[];

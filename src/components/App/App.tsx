@@ -5,12 +5,9 @@ import Home from '../../routes/Home/Home';
 import NotFoundPage from '../../routes/NotFound/NotFound';
 import FavoriteReadingsAsync from '../../routes/FavoriteReadingsAsync';
 import FavoriteQuotesAsync from '../../routes/FavoriteQuotesAsync';
-// import style from './App.css';
 import PageLayout from '../PageLayout/PageLayout';
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-explicit-any
-if ((module as any).hot) {
-  // tslint:disable-next-line:no-var-requires
+if (module.hot) {
   require('preact/debug');
 }
 

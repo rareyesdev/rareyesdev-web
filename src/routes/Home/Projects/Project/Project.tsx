@@ -1,4 +1,4 @@
-import { FunctionComponent, h } from 'preact';
+import { FunctionComponent, h, JSX } from 'preact';
 import style from './Project.css';
 import TwoColumnLayout from '../../../../components/TwoColumnLayout/TwoColumnLayout';
 import ExternalLink from '../../../../components/ExternalLink/ExternalLink';
