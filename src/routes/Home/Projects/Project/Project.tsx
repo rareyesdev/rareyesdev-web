@@ -1,10 +1,10 @@
 import { FunctionComponent, h, JSX } from 'preact';
+import { joinClasses } from '@rareyes/library';
 import style from './Project.css';
 import TwoColumnLayout from '../../../../components/TwoColumnLayout/TwoColumnLayout';
 import ExternalLink from '../../../../components/ExternalLink/ExternalLink';
 import ExternalLinkIcon from '../../../../components/Icons/ExternalLinkIcon';
 import BadgeCollection from '../../../../components/BadgeCollection/BadgeCollection';
-import { cx } from '../../../../utils/cx';
 
 interface Props {
   rootClass?: string;
@@ -25,7 +25,7 @@ const Project: FunctionComponent<Props> = ({
   badges,
 }) => {
   return (
-    <div class={cx(rootClass)}>
+    <div class={joinClasses(rootClass)}>
       <TwoColumnLayout>
         <div class={style.previewPictureContainer}>{previewPicture}</div>
         <div class={style.rightColumn}>

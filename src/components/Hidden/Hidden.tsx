@@ -1,5 +1,5 @@
 import { FunctionComponent, cloneElement, VNode } from 'preact';
-import { cx } from '../../utils/cx';
+import { joinClasses } from '@rareyes/library';
 import style from './Hidden.css';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Hidden: FunctionComponent<Props> = ({ media, children }) => {
-  return cloneElement(children, { class: cx(children.props.class, style[media]) });
+  return cloneElement(children, { class: joinClasses(children.props.class, style[media]) });
 };
 
 export default Hidden;

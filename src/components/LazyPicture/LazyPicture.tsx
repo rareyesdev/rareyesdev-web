@@ -1,7 +1,7 @@
 import { FunctionComponent, h } from 'preact';
-import style from './LazyPicture.css';
 import { useEffect, useRef } from 'preact/hooks';
-import { assertValue } from '../../utils/assertValue';
+import { assertValue } from '@rareyes/library';
+import style from './LazyPicture.css';
 
 const LazyPicture: FunctionComponent = ({ children }) => {
   const rootElement = useRef<HTMLPictureElement>();

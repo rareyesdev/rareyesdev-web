@@ -1,6 +1,6 @@
 import { FunctionComponent, h } from 'preact';
 import { useRoute, LinkProps, Link } from 'wouter-preact';
-import { cx } from '../../utils/cx';
+import { joinClasses } from '@rareyes/library';
 
 type Props = LinkProps & {
   rootClass?: string;
@@ -11,7 +11,7 @@ const InternalLink: FunctionComponent<Props> = ({ rootClass, ...props }) => {
 
   return (
     <Link {...props}>
-      <a class={cx({ active: isActive }, rootClass)}>{props.children}</a>
+      <a class={joinClasses({ active: isActive }, rootClass)}>{props.children}</a>
     </Link>
   );
 };

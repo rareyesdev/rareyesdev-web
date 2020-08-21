@@ -1,6 +1,6 @@
 import { FunctionComponent, h } from 'preact';
+import { joinClasses } from '@rareyes/library';
 import style from './Quote.css';
-import { cx } from '../../utils/cx';
 
 interface Props {
   rootClass?: string;
@@ -10,7 +10,7 @@ interface Props {
 
 const Quote: FunctionComponent<Props> = ({ rootClass, quote, author }) => {
   return (
-    <div class={cx(style.root, rootClass)}>
+    <div class={joinClasses(style.root, rootClass)}>
       <div>"{quote}"</div>
       {author && <div class={style.author}>{author}</div>}
     </div>

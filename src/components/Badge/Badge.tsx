@@ -1,6 +1,6 @@
 import { FunctionComponent, h } from 'preact';
+import { joinClasses } from '@rareyes/library';
 import style from './Badge.css';
-import { cx } from '../../utils/cx';
 
 interface Props {
   rootClass?: string;
@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Badge: FunctionComponent<Props> = ({ rootClass, text }) => {
-  return <span class={cx(style.root, rootClass)}>{text}</span>;
+  return <span class={joinClasses(style.root, rootClass)}>{text}</span>;
 };
 
 export default Badge;

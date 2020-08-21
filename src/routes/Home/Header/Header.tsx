@@ -1,10 +1,9 @@
 import { FunctionComponent, h } from 'preact';
 import { Link } from 'wouter-preact';
+import { joinClasses, assertValue } from '@rareyes/library';
 import style from './Header.css';
-import { assertValue } from '../../../utils/assertValue';
 import { getRootScrollElement } from '../../../utils/getScrollElement';
 import { useEffect, useState } from 'preact/hooks';
-import { cx } from '../../../utils/cx';
 import { addScrollEventListener } from '../../../utils/addScrollEventListener';
 import { getSizeHeaderHeight } from '../../../components/theme';
 import HomeIcon from '../../../components/Icons/HomeIcon';
@@ -54,12 +53,12 @@ const Header: FunctionComponent = () => {
   }, []);
 
   return (
-    <header class={cx(style.root, headerStyle)}>
+    <header class={joinClasses(style.root, headerStyle)}>
       <nav>
         <ul class={style.list}>
           <li>
             <Link
-              class={cx({ active: activeLink === 'home' })}
+              class={joinClasses({ active: activeLink === 'home' })}
               href="/"
               aria-label="Home - Intro"
               onClick={(e) => {
@@ -77,7 +76,7 @@ const Header: FunctionComponent = () => {
           </li>
           <li>
             <Link
-              class={cx({ active: activeLink === 'about' })}
+              class={joinClasses({ active: activeLink === 'about' })}
               href="/#about"
               aria-label="Home - About"
               onClick={(e) => {
@@ -95,7 +94,7 @@ const Header: FunctionComponent = () => {
           </li>
           <li>
             <Link
-              class={cx({ active: activeLink === 'projects' })}
+              class={joinClasses({ active: activeLink === 'projects' })}
               href="/#projects"
               aria-label="Home - Projects"
               onClick={(e) => {

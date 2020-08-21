@@ -1,6 +1,6 @@
 import { FunctionComponent, h } from 'preact';
+import { joinClasses } from '@rareyes/library';
 import style from './Footer.css';
-import { cx } from '../../utils/cx';
 import LazyPicture from '../LazyPicture/LazyPicture';
 
 const year = new Date().getFullYear();
@@ -11,7 +11,7 @@ interface Props {
 
 const Footer: FunctionComponent<Props> = ({ rootClass }) => {
   return (
-    <footer class={cx(style.root, rootClass)}>
+    <footer class={joinClasses(style.root, rootClass)}>
       <ul class={style.list}>
         <li id="copyright">© Copyright {year} Ramón Alejandro Reyes Fajardo</li>
         <li>
