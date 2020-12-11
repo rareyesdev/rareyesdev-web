@@ -1,10 +1,13 @@
 import { FunctionComponent, h } from 'preact';
 import { Link } from 'wouter-preact';
-import { joinClasses, assertValue } from '@rareyes/library';
+import {
+  joinClasses,
+  assertValue,
+  getRootScrollElement,
+  addScrollEventListener,
+} from '@rareyes/library';
 import style from './Header.css';
-import { getRootScrollElement } from '../../../utils/getScrollElement';
 import { useEffect, useState } from 'preact/hooks';
-import { addScrollEventListener } from '../../../utils/addScrollEventListener';
 import { getSizeHeaderHeight } from '../../../components/theme';
 import HomeIcon from '../../../components/Icons/HomeIcon';
 import Hidden from '../../../components/Hidden/Hidden';
