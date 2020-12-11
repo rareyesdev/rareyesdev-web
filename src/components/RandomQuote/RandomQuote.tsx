@@ -3,13 +3,16 @@ import Quote from '../Quote/Quote';
 
 import quotes from '../../assets/data/quotes.json';
 
+// Only some quotes will appear in the Intro section
+const introSectionQuotes = quotes.slice(0, 8);
+
 interface Props {
   rootClass?: string;
 }
 
 const RandomQuote: FunctionComponent<Props> = ({ rootClass }) => {
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  const { quote, author } = quotes[randomIndex];
+  const randomIndex = Math.floor(Math.random() * introSectionQuotes.length);
+  const { quote, author } = introSectionQuotes[randomIndex];
   return <Quote rootClass={rootClass} author={author} quote={quote} />;
 };
 
