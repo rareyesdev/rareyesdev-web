@@ -3,8 +3,7 @@ import Quote from '../Quote/Quote';
 
 import quotes from '../../assets/data/quotes.json';
 
-// Only some quotes will appear in the Intro section
-const introSectionQuotes = quotes.slice(0, 9);
+const introSectionQuotes = quotes.featured;
 
 interface Props {
   rootClass?: string;
