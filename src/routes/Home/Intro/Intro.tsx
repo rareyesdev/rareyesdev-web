@@ -16,10 +16,9 @@ export const Intro: FunctionComponent = () => {
         <div class={style.headlineAndDescription}>
           <h1 class={style.headline}>I'm Ramón Alejandro</h1>
           <h2 class={style.description}>
-            A <span class={style.highlightText}>Senior Software Engineer</span>, focused on
-            fullstack web development with <span class={style.highlightText}>React</span>,{' '}
-            <span class={style.highlightText}>TypeScript</span>, and{' '}
-            <span class={style.highlightText}>GraphQL</span>.
+            <span class={style.highlightText}>Software Engineer</span>, passionate about web
+            development (<span class={style.highlightText}>React</span> and{' '}
+            <span class={style.highlightText}>TypeScript</span>)
           </h2>
           <br />
           <ul class={style.iconList}>
