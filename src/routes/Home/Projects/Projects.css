@@ -7,11 +7,17 @@
   background-color: colorBrand;
 }
 
+.intro {
+    padding: 32px 0;
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
 .header > h2 {
   margin: 0;
   padding: size3x 0;
 }
 
-.container > *:nth-child(even) {
+.container > *:nth-child(odd) {
   background-color: colorBackgroundDefaultLight;
 }

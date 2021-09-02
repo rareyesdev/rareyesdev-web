@@ -5,6 +5,7 @@ interface CssExports {
   'colorBrand': string;
   'container': string;
   'header': string;
+  'intro': string;
   'size2x': string;
   'size3x': string;
   'theme': string;
