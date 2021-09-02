@@ -43,20 +43,19 @@ const About: FunctionComponent = () => {
             programs, the{' '}
             <ExternalLink href="https://icpc.global/">ACM-ICPC World Finals</ExternalLink> is the
             most disputed event. This event unlike the IOI is organized by teams. So I joined two
-            friends and after multiple local contests we got the first ticket to the 2012 ACM-ICPC
+            friends and after multiple local contests, we got the first ticket to the 2012 ACM-ICPC
             World Finals. We did it again next year and got an{' '}
             <ExternalLink href="https://icpc.global/ICPCID/G5QG9UL9MV2P">
               Honorable Mention
             </ExternalLink>{' '}
-            in both occasions.
+            on both occasions.
           </p>
           <p>
-            The ACM-ICPC event has a limit of two participations, after reaching the limit, I
-            focused my attention back to college. During this time I also played a lot of{' '}
-            <ExternalLink href="https://blog.dota2.com/">Dota 2</ExternalLink>.
+            The ACM-ICPC event has a limit of two attendances per contestant, after reaching the
+            limit, I focused my attention back on college.
           </p>
           <p>
-            During my college stay I also did some Freelance work using C#, ASP.NET and Microsoft
+            During my college stay, I also did some Freelance work using C#, ASP.NET and Microsoft
             SQL Server. Then some mobile development, first using Xamarin and then Swift.
           </p>
           <p>
@@ -68,16 +67,15 @@ const About: FunctionComponent = () => {
           </p>
           <p>
             I spend most of my time writing Frontend code using React and TypeScript, but I'm very
-            passionate about automation. When the projects requires it, I'm comfortable creating
+            passionate about automation. When the project requires it, I'm comfortable creating
             custom builds using{' '}
             <ExternalLink href="https://github.com/webpack/webpack">Webpack</ExternalLink> and{' '}
             <ExternalLink href="https://github.com/babel/babel">Babel</ExternalLink>. I also like to
             use a combination of{' '}
             <ExternalLink href="https://github.com/storybookjs/storybook">Storybook</ExternalLink>,{' '}
-            <ExternalLink href="https://github.com/facebook/jest">Jest</ExternalLink> and{' '}
+            <ExternalLink href="https://github.com/facebook/jest">Jest</ExternalLink> and,{' '}
             <ExternalLink href="https://www.cypress.io/">Cypress</ExternalLink> in order to create a
-            good testing experience. On top of that I believe that a CI/CD pipeline is a must have
-            for most projects.{' '}
+            good testing experience. On top of that, I believe that a CI/CD pipeline is a must-have.{' '}
             <ExternalLink href="https://github.com/features/actions">Github Actions</ExternalLink>{' '}
             is my preferred way to go but I've also used GitLab CI, Jenkins, and Travis CI. I
             usually combine them with{' '}
@@ -88,9 +86,9 @@ const About: FunctionComponent = () => {
             .
           </p>
           <p>
-            When I'm not writing code, I enjoy watching StaCraft 2 tournaments,{' '}
-            <Link href="/favorite-readings">reading</Link>, and{' '}
-            <ExternalLink href="https://brilliant.org/">exercising my brain</ExternalLink>.
+            When I'm not writing code, I <Link href="/favorite-readings">read</Link> hike, play
+            table tennis, work out, and explore new food places. I can eat mexican every day. Always
+            is up tacos 🌮.
           </p>
         </div>
       </TwoColumnLayout>
