@@ -10,8 +10,8 @@
   max-width: 100%;
   height: auto;
   filter: brightness(0.9);
-  /* chrome image downscale makes it look blurry. https://stackoverflow.com/a/42216003/2105988 */
-  /* image-rendering: -webkit-optimize-contrast; */
+  /* chrome image downscale makes it look blurry. https://stackoverflow.com/a/39349868/2105988 */
+  transform: translateZ(0);
 }
 
 .rightColumn {
