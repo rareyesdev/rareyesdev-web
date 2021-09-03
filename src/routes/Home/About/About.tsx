@@ -86,7 +86,7 @@ const About: FunctionComponent = () => {
             .
           </p>
           <p>
-            When I'm not writing code, I <Link href="/favorite-readings">read</Link> hike, play
+            When I'm not writing code, I <Link href="/favorite-readings">read</Link>, hike, play
             table tennis, work out, and explore new food places. I can eat mexican every day. Always
             is up tacos 🌮.
           </p>

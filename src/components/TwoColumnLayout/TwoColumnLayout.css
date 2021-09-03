@@ -30,9 +30,4 @@
   .root > *:first-child {
     flex: 1 1 auto;
   }
-
-  .root > *:last-child {
-    padding-left: size4x;
-    padding-right: size4x;
-  }
 }

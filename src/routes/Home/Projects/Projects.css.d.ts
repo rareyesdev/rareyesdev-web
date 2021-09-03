@@ -6,8 +6,8 @@ interface CssExports {
   'container': string;
   'header': string;
   'intro': string;
-  'size2x': string;
   'size3x': string;
+  'size4x': string;
   'theme': string;
 }
 export const cssExports: CssExports;

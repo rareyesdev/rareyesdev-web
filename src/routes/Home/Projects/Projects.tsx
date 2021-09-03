@@ -9,10 +9,10 @@ const Projects: FunctionComponent = () => {
       <div class={style.header}>
         <h2>PROJECTS</h2>
       </div>
-      <div class={style.intro}>
+      <p class={style.intro}>
         I've been doing mostly enterprise work, sometimes I work on small project for learning
         purposes. These are the ones that are public.
-      </div>
+      </p>
       <div class={style.container}>
         <Project
           previewPicture={

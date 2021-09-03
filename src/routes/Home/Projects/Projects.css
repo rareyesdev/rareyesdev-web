@@ -1,5 +1,5 @@
 @value theme: '../../../components/theme.css';
-@value colorBrand, colorBackgroundDefaultLight, size2x, size3x from theme;
+@value colorBrand, colorBackgroundDefaultLight, size3x, size4x from theme;
 
 .header {
   text-align: center;
@@ -8,9 +8,10 @@
 }
 
 .intro {
-    padding: 32px 0;
-    margin: 0 auto;
-    max-width: 1350px;
+  padding: size4x;
+  margin: 0 auto;
+  max-width: 1350px;
+  text-align: justify;
 }
 
 .header > h2 {
