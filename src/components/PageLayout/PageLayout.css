@@ -3,7 +3,6 @@
 
 .mainAndFooter {
   margin-top: var(--sizeHeaderHeight);
-  min-height: calc(100vh - var(--sizeHeaderHeight));
   display: flex;
   flex-direction: column;
 }
@@ -13,6 +12,7 @@
   padding: size4x 0;
   margin: 0 auto;
   max-width: 720px;
+  min-height: calc(100vh - var(--sizeHeaderHeight));
 }
 
 @media (max-width: breakpointSm) {
