@@ -1,7 +1,7 @@
 @value colorBlack: #000000;
 @value colorWhite: #ffffff;
 
-@value colorBrand: rgb(49, 36, 80);
+@value colorBrand: hsl(258, 38%, 23%);
 
 @value colorBackgroundDefault: #2b2b2b;
 @value colorBackgroundDefaultLight: #353535;

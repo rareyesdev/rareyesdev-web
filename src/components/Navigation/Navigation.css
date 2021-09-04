@@ -137,7 +137,7 @@
 
 .menuInput:checked ~ .menuList {
   /* the height of the two items inside the menu */
-  max-height: 106px;
+  max-height: 150px;
 }
 
 /* @media */

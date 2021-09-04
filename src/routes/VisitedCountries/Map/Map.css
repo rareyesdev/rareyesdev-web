@@ -1,0 +1,16 @@
+@value theme: '../../../components/theme.css';
+@value breakpointSm, size4x from theme;
+
+.root {
+  width: 90vw;
+  max-width: 100%;
+}
+
+@media (max-width: breakpointSm) {
+  .root {
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(size4x * -1);
+    margin-right: calc(size4x * -1);
+  }
+}

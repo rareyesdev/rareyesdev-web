@@ -1,0 +1,5 @@
+@value theme: '../../components/theme.css';
+@value breakpointSm, size8x from theme;
+
+@media (max-width: breakpointSm) {
+}

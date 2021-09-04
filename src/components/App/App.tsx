@@ -5,6 +5,7 @@ import Home from '../../routes/Home/Home';
 import NotFoundPage from '../../routes/NotFound/NotFound';
 import FavoriteReadingsAsync from '../../routes/FavoriteReadingsAsync';
 import FavoriteQuotesAsync from '../../routes/FavoriteQuotesAsync';
+import VisitedCountriesAsync from '../../routes/VisitedCountriesAsync';
 import PageLayout from '../PageLayout/PageLayout';
 
 if (module.hot) {
@@ -20,6 +21,7 @@ const App: FunctionComponent = () => {
           <Switch>
             <Route path="/favorite-readings" component={FavoriteReadingsAsync} />
             <Route path="/favorite-quotes" component={FavoriteQuotesAsync} />
+            <Route path="/visited-countries" component={VisitedCountriesAsync} />
             <NotFoundPage />
           </Switch>
         </PageLayout>

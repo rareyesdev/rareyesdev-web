@@ -1,14 +1,18 @@
 [
-	{
-		"url": "/",
-		"title": "rareyes.dev"
-	},
-	{
-		"url": "/favorite-readings",
-		"title": "rareyes.dev | Favorite Readings"
-	},
-	{
-		"url": "/favorite-quotes",
-		"title": "rareyes.dev | Favorite Quotes"
-	}
+    {
+        "url": "/",
+        "title": "rareyes.dev"
+    },
+    {
+        "url": "/favorite-readings",
+        "title": "rareyes.dev | Favorite Readings"
+    },
+    {
+        "url": "/favorite-quotes",
+        "title": "rareyes.dev | Favorite Quotes"
+    },
+    {
+        "url": "/visited-countries",
+        "title": "rareyes.dev | Visited Countries"
+    }
 ]

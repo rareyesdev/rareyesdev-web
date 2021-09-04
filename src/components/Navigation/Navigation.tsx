@@ -51,6 +51,9 @@ const Navigation: FunctionComponent = () => {
           <li>
             <InternalLink href="/favorite-quotes">Favorite Quotes</InternalLink>
           </li>
+          <li>
+            <InternalLink href="/visited-countries">Visited Countries</InternalLink>
+          </li>
         </ul>
       </button>
     </nav>
