@@ -26,37 +26,26 @@ const About: FunctionComponent = () => {
           <h2>About Me</h2>
           <p>
             I've been programming since I was 14. I joined a programming club in high school and
-            started solving programming challenges using Pascal and later C++. After 3 years of
-            training, I ranked #1 in my country's official contest to form the national team for the{' '}
+            started solving programming challenges using Pascal and later C++. This led me to
+            participate once in the{' '}
             <ExternalLink href="https://ioinformatics.org/">
               International Olympiad in Informatics (IOI)
-            </ExternalLink>
-            . In 2009 I participated in the IOI and got a{' '}
+            </ExternalLink>{' '}
+            [
             <ExternalLink href="https://stats.ioinformatics.org/search?q=Alejandro+Reyes&yf=2009&ys=2009">
               Bronze Medal
             </ExternalLink>
-            .
-          </p>
-          <p>
-            One year later I started my Computer Science college degree. While the IOI is the most
-            important event for high school students; for universities with Computer Science
-            programs, the{' '}
-            <ExternalLink href="https://icpc.global/">ACM-ICPC World Finals</ExternalLink> is the
-            most disputed event. This event unlike the IOI is organized by teams. So I joined two
-            friends and after multiple local contests, we got the first ticket to the 2012 ACM-ICPC
-            World Finals. We did it again next year and got an{' '}
+            ], and twice in the{' '}
+            <ExternalLink href="https://icpc.global/">ACM-ICPC World Finals</ExternalLink> [
             <ExternalLink href="https://icpc.global/ICPCID/G5QG9UL9MV2P">
               Honorable Mention
-            </ExternalLink>{' '}
-            on both occasions.
+            </ExternalLink>
+            ].
           </p>
           <p>
-            The ACM-ICPC event has a limit of two attendances per contestant, after reaching the
-            limit, I focused my attention back on college.
-          </p>
-          <p>
-            During my college stay, I also did some Freelance work using C#, ASP.NET and Microsoft
-            SQL Server. Then some mobile development, first using Xamarin and then Swift.
+            I studied Computer Science. During this time in college, I also did some Freelance work
+            using C#, ASP.NET, and Microsoft SQL Server. Then some mobile development, first using
+            Xamarin and then Swift.
           </p>
           <p>
             After graduating I started focusing on the{' '}
@@ -66,9 +55,12 @@ const About: FunctionComponent = () => {
             bit later and since then I haven't stopped learning about them.
           </p>
           <p>
-            I spend most of my time writing Frontend code using React and TypeScript, but I'm very
-            passionate about automation. When the project requires it, I'm comfortable creating
-            custom builds using{' '}
+            I spend most of my time writing Frontend code using{' '}
+            <ExternalLink href="https://github.com/facebook/react">React</ExternalLink> and{' '}
+            <ExternalLink href="https://github.com/microsoft/TypeScript">TypeScript</ExternalLink>.
+            I like to set up the best Developer Experience possible, combining VSCode, ESLint,
+            Prettier, Husky, Lint Staged, Conventional Commits, Semantic Versioning, etc. When
+            needed, I create custom builds using{' '}
             <ExternalLink href="https://github.com/webpack/webpack">Webpack</ExternalLink> and{' '}
             <ExternalLink href="https://github.com/babel/babel">Babel</ExternalLink>. I also like to
             use a combination of{' '}
@@ -77,18 +69,11 @@ const About: FunctionComponent = () => {
             <ExternalLink href="https://www.cypress.io/">Cypress</ExternalLink> in order to create a
             good testing experience. On top of that, I believe that a CI/CD pipeline is a must-have.{' '}
             <ExternalLink href="https://github.com/features/actions">Github Actions</ExternalLink>{' '}
-            is my preferred way to go but I've also used GitLab CI, Jenkins, and Travis CI. I
-            usually combine them with{' '}
-            <ExternalLink href="https://github.com/lerna/lerna">Lerna</ExternalLink> or{' '}
-            <ExternalLink href="https://github.com/semantic-release/semantic-release">
-              Semantic Release
-            </ExternalLink>
-            .
+            is my preferred way to go but I've also used GitLab CI, Jenkins, and Travis CI.
           </p>
           <p>
-            When I'm not writing code, I <Link href="/favorite-readings">read</Link>, hike, play
-            table tennis, work out, and explore new food places. I can eat mexican every day. Always
-            is up tacos 🌮.
+            When I'm not writing code, I <Link href="/favorite-readings">read</Link>, hike, travel,
+            work out, and explore new food places. I can eat Mexican every day 🌮
           </p>
         </div>
       </TwoColumnLayout>
