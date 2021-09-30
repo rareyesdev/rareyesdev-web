@@ -6,7 +6,20 @@ import style from './Map.css';
 
 const geoUrl = '/assets/data/world-110m.json';
 
-const visited = ['CUB', 'MEX', 'POL', 'BUL', 'BGR', 'RUS', 'DEU', 'ITA', 'CZE', 'CHE', 'ESP'];
+const visited = [
+  'CUB',
+  'MEX',
+  'POL',
+  'BUL',
+  'BGR',
+  'RUS',
+  'DEU',
+  'ITA',
+  'CZE',
+  'CHE',
+  'ESP',
+  'UKR',
+];
 
 interface Props {
   setTooltipContent: (content: string) => void;
