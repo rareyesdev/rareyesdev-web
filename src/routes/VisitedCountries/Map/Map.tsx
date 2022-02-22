@@ -19,6 +19,7 @@ const visited = [
   'CHE',
   'ESP',
   'UKR',
+  'USA',
 ];
 
 interface Props {
