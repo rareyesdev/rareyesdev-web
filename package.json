@@ -29,7 +29,7 @@
     "preact-markup": "^2.0.0",
     "preact-render-to-string": "^5.1.4",
     "react-simple-maps": "^2.3.0",
-    "react-tooltip": "^4.2.21",
+    "react-tooltip": "4.2.21",
     "wouter-preact": "^2.5.0"
   },
   "devDependencies": {
