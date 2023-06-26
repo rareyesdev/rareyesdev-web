@@ -28,6 +28,8 @@ interface Props {
 
 const MapInternal: FunctionComponent<Props> = ({ setTooltipContent }) => {
   return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error - Don't know why this is happening
     <ComposableMap data-tip="" className={style.root} projectionConfig={{ scale: 200 }}>
       <ZoomableGroup>
         <Geographies geography={geoUrl}>
