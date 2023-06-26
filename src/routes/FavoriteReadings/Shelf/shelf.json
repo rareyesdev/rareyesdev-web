@@ -41,6 +41,13 @@
   ],
   "silver": [
     {
+      "title": "You and Your Research",
+      "author": [
+        "Richard Hamming"
+      ],
+      "url": "https://homepages.inf.ed.ac.uk/wadler/papers/firbush/hamming.pdf"
+    },
+    {
       "title": "Atomic habits",
       "author": [
         "James Clear"

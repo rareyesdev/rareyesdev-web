@@ -6,6 +6,7 @@ import BookIcon from '../../../../components/Icons/BookIcon';
 
 interface Reading {
   title: string;
+  url?: string;
 }
 
 interface Props {
@@ -19,12 +20,22 @@ const ShelfRow: FunctionComponent<Props> = ({ rootClass, color, readings }) => {
     <div class={joinClasses(style.root, rootClass)}>
       <MedalIcon class={style.medalIcon} style={{ color }} />
       <ul class={style.list} role="list">
-        {readings.map((reading) => (
-          <li key={reading.title}>
-            <BookIcon class={style.bookIcon} />
-            <div class={style.title}>{reading.title}</div>
-          </li>
-        ))}
+        {readings.map((reading) => {
+          const item = (
+            <li key={reading.title}>
+              <BookIcon class={style.bookIcon} />
+              <div class={style.title}>{reading.title}</div>
+            </li>
+          );
+
+          return reading.url ? (
+            <a href={reading.url} target="_blank" rel="noopener noreferrer">
+              {item}
+            </a>
+          ) : (
+            item
+          );
+        })}
       </ul>
     </div>
   );
