@@ -7,7 +7,7 @@ import HomeIcon from '../Icons/HomeIcon';
 
 const Navigation: FunctionComponent = () => {
   const [location] = useLocation();
-  const inputElement = useRef<HTMLInputElement>();
+  const inputElement = useRef<HTMLInputElement>(null);
   const prevLocation = useRef<string | undefined>();
 
   const isHomePage = location === '/';

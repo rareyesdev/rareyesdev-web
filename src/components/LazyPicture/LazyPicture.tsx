@@ -4,7 +4,7 @@ import { assertValue } from '@rareyes/library';
 import style from './LazyPicture.css';
 
 const LazyPicture: FunctionComponent = ({ children }) => {
-  const rootElement = useRef<HTMLPictureElement>();
+  const rootElement = useRef<HTMLPictureElement>(null);
   useEffect(() => {
     if (assertValue(rootElement.current)) {
       return observe(rootElement.current);
