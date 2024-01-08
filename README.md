@@ -1,5 +1,7 @@
 # rareyesdev-web
 
+> This is the v1 version of my portfolio website. Most of this was migrated to v2 https://github.com/rareyesdev/blog
+
 ## CLI Commands
 
 - `npm start`: Run a development, HMR server
